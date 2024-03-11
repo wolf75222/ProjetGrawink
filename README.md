@@ -1,6 +1,6 @@
 # Projet Grawink
 
-![docs/grawink.webp]()
+![Grawink](docs/grawink.webp)
 
 ## Introduction
 
