@@ -1,5 +1,7 @@
 # Projet Grawink
 
+![docs/grawink.webp]()
+
 ## Introduction
 
 Le projet Grawink est une bibliothèque C++ conçue pour la création et la gestion de dessins SVG. Il permet aux utilisateurs de créer des dessins vectoriels en utilisant une variété de formes géométriques et de les exporter en format SVG. Cette bibliothèque vise à offrir une interface simple pour la programmation orientée objet et la manipulation graphique.
