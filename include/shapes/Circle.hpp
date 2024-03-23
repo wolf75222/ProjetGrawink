@@ -1,15 +1,15 @@
 #include "Shape.hpp"
 
+
 class Circle : public Shape {
 private:
-    double radius;
+    double radius = 1.0;
 
 public:
-    Circle(int id, double x, double y, double radius, bool filled);
-    void scale(float factor) override;
-    void translate() override;
-    void rotate() override;
-    void fill() override;
-    void draw() override;
-    void erase() override;
+    Circle(int _id, double _x, double _y, double _size, double _angle, double _radius) : Shape(_id, _x, _y, _size, _angle), radius(_radius) {};
+
+    void scale(double factor) override;
+    void rotate(double angle) override = 0;
+    
+    std::string draw() override;
 };

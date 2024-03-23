@@ -1,16 +1,14 @@
 #include "Shape.hpp"
 
-class Rectangle : public Shape {
+class Ellipse : public Shape {
 private:
-    double width;
-    double height;
-    
+    double width = 1.0;
+    double height = 1.0;
+
 public:
-    Rectangle(int id, double x, double y, double width, double height, bool filled);
-    void scale(float factor) override;
-    void translate() override;
-    void rotate() override;
-    void fill() override;
-    void draw() override;
-    void erase() override;
+    Ellipse(int _id, double _x, double _y, double _size, double _angle, double _width, double _height) : Shape(_id, _x, _y, _size, _angle), width(_width), height(_height) {};
+    
+    void scale(double factor) override;
+
+    std::string draw() override;
 };
