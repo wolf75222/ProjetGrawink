@@ -1,1 +1,7 @@
-// Point d'entrée principal du programme
+#include "Grawink.hpp"
+
+int main() {
+    GrawEditor& editor = GrawEditor::GetEditor();
+
+    return 0;
+}

@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <memory> 
-#include "Shape.hpp" 
+#include "Shapes.hpp" 
 
 class GrawEditor {
 public:
@@ -20,7 +20,10 @@ public:
     };
 
     // Renvoie une référence à l'instance unique de GrawEditor
-    static GrawEditor& GetEditor();
+    static GrawEditor& GetEditor() {
+        static GrawEditor instance;
+        return instance;
+    };
 
     // Ajoute un nouvel objet au canevas
     template <typename Shape, typename... Args>
@@ -55,6 +58,7 @@ public:
     std::unique_ptr<Shape> GetNew(Args&&... args);
 
 private:
+
     GrawEditor() = default; // Constructeur privé pour le singleton
     GrawEditor(const GrawEditor&) = delete; // Supprime le constructeur de copie
     GrawEditor& operator=(const GrawEditor&) = delete; // Supprime l'opérateur d'affectation

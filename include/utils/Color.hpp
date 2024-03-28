@@ -4,9 +4,9 @@ private:
     int g;
     int b;
     double a;
-    
+
 public:
-    char* asSVG() {
+    std::string asSVG() {
         return "rgba()";
     }
 };

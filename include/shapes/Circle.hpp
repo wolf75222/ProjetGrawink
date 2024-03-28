@@ -1,6 +1,5 @@
 #include "Shape.hpp"
 
-
 class Circle : public Shape {
 private:
     double radius = 1.0;
