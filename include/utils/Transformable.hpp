@@ -2,7 +2,19 @@
 
 #include <cmath>
 
-class Point {
+class Point;
+
+class Transformable {
+public:
+    Transformable() = default;
+    ~Transformable() = default;
+
+    virtual void translate(Point& p) = 0;
+    virtual void rotate(Point& p, double angle) = 0;
+    virtual void scale(double factor) = 0;
+};
+
+class Point : Transformable {
 private:
     double x = 0.0;
     double y = 0.0;
@@ -33,14 +45,4 @@ public:
         this->x *= factor;
         this->y *= factor;
     }
-};
-
-class Transformable {
-public:
-    Transformable() = default;
-    ~Transformable() = default;
-
-    virtual void translate(Point& p) = 0;
-    virtual void rotate(Point& p, double angle) = 0;
-    virtual void scale(double factor) = 0;
 };
