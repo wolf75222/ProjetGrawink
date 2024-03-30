@@ -32,38 +32,38 @@ public:
         return instance;
     };
     // Ajoute un nouvel objet au canevas
-    GrawEditor& Add(std::shared_ptr<Shape> shape);
+    GrawEditor& add(std::shared_ptr<Shape> shape);
 
     // Ajoute n objets au canevas
-    GrawEditor &Add(std::vector<std::shared_ptr<Shape>> shapes);
+    GrawEditor &add(std::vector<std::shared_ptr<Shape>> shapes);
 
     // Supprime un objet du canevas par son identifiant ou référence
-    GrawEditor &Delete(int shapeId);
+    GrawEditor &remove(int shapeId);
 
     // Annule le dernier ajout d'objet
-    GrawEditor &Undo(unsigned int steps = 1);
+    GrawEditor &undo(unsigned int steps = 1);
 
     // Réinsère le dernier objet supprimé
-    GrawEditor &Redo(unsigned int steps = 1);
+    GrawEditor &redo(unsigned int steps = 1);
 
     // Redimensionne le canevas
-    GrawEditor &Resize(int width, int height);
+    GrawEditor &resize(int width, int height);
 
     // Redimensionne le canevas en supprimant les objets extérieurs
-    GrawEditor &Crop(int x, int y, int width, int height);
+    GrawEditor &crop(int x, int y, int width, int height);
 
     // Sélectionne les objets à exporter/afficher
-    GrawEditor &Select(ShapeType types);
+    GrawEditor &select(ShapeType types);
 
     // Affiche l'ensemble des objets contenus dans le canevas, triés par catégorie
-    GrawEditor &Print();
+    GrawEditor &print();
 
     // Écrit le code SVG résultant des objets contenus dans le canevas
-    GrawEditor &ExportSVG(const std::string &filename);
+    GrawEditor &draw(const std::string &filename);
 
     // Crée une nouvelle instance de la classe `Shape` et retourne un pointeur vers l'objet nouvellement alloué
     template <typename Shape, typename... Args>
-    std::unique_ptr<Shape> GetNew(Args &&...args);
+    std::unique_ptr<Shape> get_new(Args &&...args);
 
     ~GrawEditor(); // Destructeur
 

@@ -25,12 +25,12 @@ int main() {
     p = Point(140, 110);
     Rectangle* backpack = new Rectangle(6, p, 20, 60, 0);
 
-    editor.Add(std::shared_ptr<Shape>(head));
-    editor.Add(std::shared_ptr<Shape>(body));
-    editor.Add(std::shared_ptr<Shape>(visor));
-    editor.Add(std::shared_ptr<Shape>(left_leg));
-    editor.Add(std::shared_ptr<Shape>(right_leg));
-    editor.Add(std::shared_ptr<Shape>(backpack));
+    editor.add(std::shared_ptr<Shape>(head));
+    editor.add(std::shared_ptr<Shape>(body));
+    editor.add(std::shared_ptr<Shape>(visor));
+    editor.add(std::shared_ptr<Shape>(left_leg));
+    editor.add(std::shared_ptr<Shape>(right_leg));
+    editor.add(std::shared_ptr<Shape>(backpack));
 
     Color black = Color(0, 0, 0, 1);
     Color red = Color(255, 0, 0, 1);
@@ -56,30 +56,30 @@ int main() {
 
     // Resizing and cropping the canvas
     printf("Testing Resize and Crop\n");
-    editor.Resize(2000, 2000); // Resize the canvas to 800x600
+    editor.resize(2000, 2000); // Resize the canvas to 800x600
     printf("Resize Ok\n");
-    editor.Crop(-1000, -1000, 1000, 1000); // Crop the canvas to a region defined by the rectangle (100,100) to (400,300)
+    editor.crop(-1000, -1000, 1000, 1000); // Crop the canvas to a region defined by the rectangle (100,100) to (400,300)
     printf("Crop Ok\n");
 
     // Selecting shapes and printing
     printf("Testing Select and Print\n");
-    editor.Select(GrawEditor::ShapeType::All); // Select all shapes // Select all shapes
+    editor.select(GrawEditor::ShapeType::All); // Select all shapes // Select all shapes
     printf("Select Ok\n");
-    editor.Print(); 
+    editor.print(); 
     printf("Print Ok\n");
 
     
     
     // Exporting to SVG
     printf("Testing ExportSVG\n");
-    editor.ExportSVG("shapes_output.svg");
+    editor.draw("shapes_output.svg");
     printf("ExportSVG Ok\n");
 
     // Testing Undo/Redo functionality
     printf("Testing Undo/Redo\n");
-    editor.Undo(2); // Undo the last two actions
+    editor.undo(2); // Undo the last two actions
     printf("Undo Ok\n");
-    editor.Redo(1); // Redo one action
+    editor.redo(1); // Redo one action
     printf("Redo Ok\n");    
     return 0;
 }

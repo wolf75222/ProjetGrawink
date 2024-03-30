@@ -3,14 +3,14 @@
 #include <iostream>
 #include <fstream>
 
-GrawEditor& GrawEditor::Add(std::shared_ptr<Shape> shape) {
+GrawEditor& GrawEditor::add(std::shared_ptr<Shape> shape) {
     shapes.push_back(shape);
     addedShapes.push_back(shape);
 
     return GetEditor();
 }
 
-GrawEditor &GrawEditor::Add(std::vector<std::shared_ptr<Shape>> shapes)
+GrawEditor &GrawEditor::add(std::vector<std::shared_ptr<Shape>> shapes)
 {
     for (const auto &shape : shapes)
     {
@@ -21,7 +21,7 @@ GrawEditor &GrawEditor::Add(std::vector<std::shared_ptr<Shape>> shapes)
     return GetEditor();
 }
 
-GrawEditor &GrawEditor::Delete(int shapeId)
+GrawEditor &GrawEditor::remove(int shapeId)
 {
     auto it = std::find_if(shapes.begin(), shapes.end(), [shapeId](const std::shared_ptr<Shape> &shape) {
         return shape->getId() == shapeId;
@@ -36,7 +36,7 @@ GrawEditor &GrawEditor::Delete(int shapeId)
     return GetEditor();
 }
 
-GrawEditor &GrawEditor::Resize(int width, int height)
+GrawEditor &GrawEditor::resize(int width, int height)
 {
 
     auto ratio = static_cast<double>(width) / static_cast<double>(height);
@@ -52,7 +52,7 @@ GrawEditor &GrawEditor::Resize(int width, int height)
     return GetEditor();
 }
 
-GrawEditor &GrawEditor::Crop(int x, int y, int width, int height)
+GrawEditor &GrawEditor::crop(int x, int y, int width, int height)
 {
 
     auto ratio = static_cast<double>(width) / static_cast<double>(height);
@@ -71,13 +71,13 @@ GrawEditor &GrawEditor::Crop(int x, int y, int width, int height)
     return GetEditor();
 }
 
-GrawEditor &GrawEditor::Select(ShapeType types)
+GrawEditor &GrawEditor::select(ShapeType types)
 {
     selectedShapes = types;
     return GetEditor();
 }
 
-GrawEditor &GrawEditor::Print()
+GrawEditor &GrawEditor::print()
 {
     if (shapes.empty())
     {
@@ -96,7 +96,7 @@ GrawEditor &GrawEditor::Print()
     return GetEditor();
 }
 
-GrawEditor &GrawEditor::ExportSVG(const std::string &filename)
+GrawEditor &GrawEditor::draw(const std::string &filename)
 {
     std::ofstream file(filename);
     if (file.is_open())
@@ -112,7 +112,7 @@ GrawEditor &GrawEditor::ExportSVG(const std::string &filename)
     return GetEditor();
 }
 
-GrawEditor &GrawEditor::Undo(unsigned int steps)
+GrawEditor &GrawEditor::undo(unsigned int steps)
 {
     for (unsigned int i = 0; i < steps; i++)
     {
@@ -126,7 +126,7 @@ GrawEditor &GrawEditor::Undo(unsigned int steps)
     return GetEditor();
 }
 
-GrawEditor &GrawEditor::Redo(unsigned int steps)
+GrawEditor &GrawEditor::redo(unsigned int steps)
 {
     for (unsigned int i = 0; i < steps; i++)
     {
@@ -141,7 +141,7 @@ GrawEditor &GrawEditor::Redo(unsigned int steps)
 }
 
 template <typename TShape, typename... Args>
-std::unique_ptr<TShape> GrawEditor::GetNew(Args &&...args)
+std::unique_ptr<TShape> GrawEditor::get_new(Args &&...args)
 {
     return std::unique_ptr<TShape>(new TShape(std::forward<Args>(args)...));
 }
