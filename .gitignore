@@ -1,3 +1,9 @@
-test.svg
+# Files
+*.svg
+
+# Build directories
 bin/
 build/
+
+# Vscode
+.vscode/
