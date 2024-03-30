@@ -1,7 +1,7 @@
+#include "../../include/shapes/Polygon.hpp"
+
 #include <string>
 #include <sstream>
-
-#include "../../include/shapes/Polygon.hpp"
 
 void Polygon::scale(double factor) {
     for (Point& vertex : vertices) {

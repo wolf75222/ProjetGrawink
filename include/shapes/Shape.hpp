@@ -2,9 +2,11 @@
 
 #include "../utils/Drawable.hpp"
 #include "../utils/Transformable.hpp"
+#include "../utils/Color.hpp"
+
 #include <iostream>
 #include <string>
-#include "../utils/Color.hpp"
+#include <cstdint>
 
 class Shape : public Drawable, Transformable
 {

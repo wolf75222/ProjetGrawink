@@ -1,7 +1,7 @@
+#include "../../include/shapes/Circle.hpp"
+
 #include <string>
 #include <sstream>
-
-#include "../../include/shapes/Circle.hpp"
 
 void Circle::scale(double factor) {
     this->radius *= factor;

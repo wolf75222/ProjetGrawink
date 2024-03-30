@@ -1,7 +1,7 @@
+#include "../../include/shapes/Rectangle.hpp"
+
 #include <string>
 #include <sstream>
-
-#include "../../include/shapes/Rectangle.hpp"
 
 void Rectangle::scale(double factor) {
     this->height *= factor;

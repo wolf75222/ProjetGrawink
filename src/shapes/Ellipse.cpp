@@ -1,7 +1,7 @@
+#include "../../include/shapes/Ellipse.hpp"
+
 #include <string>
 #include <sstream>
-
-#include "../../include/shapes/Ellipse.hpp"
 
 void Ellipse::scale(double factor) {
     this->height *= factor;

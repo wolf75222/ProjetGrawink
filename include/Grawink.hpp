@@ -1,5 +1,4 @@
-
-
+#include "shapes/Shape.hpp"
 
 #include <vector>
 #include <memory>
@@ -7,10 +6,8 @@
 #include <iostream>
 #include <fstream>
 #include <algorithm>
-
+#include <cstdint>
 #include <list>
-
-#include "shapes/Shape.hpp"
 
 class GrawEditor
 {

@@ -1,4 +1,5 @@
 #include "../../include/shapes/Shape.hpp"
+
 #include <iostream>
 
 void Shape::translate(Point& p) {

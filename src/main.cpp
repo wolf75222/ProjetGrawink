@@ -1,8 +1,8 @@
-#include <iostream>
 #include "../include/Grawink.hpp"
 #include "../include/utils/Color.hpp"
 #include "../include/shapes/Shapes.hpp"
-#include <memory>
+
+#include <iostream>
 
 int main() {
     GrawEditor& editor = GrawEditor::GetEditor();
