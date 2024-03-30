@@ -13,8 +13,8 @@ public:
 
     Point getCenter() const override;
 
-    void translate(Point& p) override;
-    void rotate(Point& p, double angle) override;
+    void translate(const Point& p) override;
+    void rotate(const Point& p, double angle) override;
     void scale(double factor) override;
 
     std::string draw() const override;

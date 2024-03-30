@@ -9,13 +9,13 @@ void Polygon::scale(double factor) {
     }
 }
 
-void Polygon::translate(Point& p) {
+void Polygon::translate(const Point& p) {
     for (Point& vertex : vertices) {
         vertex.translate(p);
     }
 }
 
-void Polygon::rotate(Point& p, double angle) {
+void Polygon::rotate(const Point& p, double angle) {
     for (Point& vertex : vertices) {
         vertex.rotate(p, angle);
     }

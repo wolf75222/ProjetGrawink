@@ -104,9 +104,7 @@ GrawEditor &GrawEditor::ExportSVG(const std::string &filename)
         file << "<svg width=\"" << width << "\" height=\"" << height << "\">" << std::endl;
         for (const auto &shape : shapes)
         {
-            file << "<g transform=\"translate(" << shape->getId() << ")\">" << std::endl;
-            file << "<rect x=\"" << shape->getId() << "\" y=\"" << shape->getId() << "\" width=\"" << shape->getId() << "\" height=\"" << shape->getId() << "\" fill=\"none\" stroke=\"black\"/>" << std::endl;
-            file << "</g>" << std::endl;
+            file << shape->draw() << std::endl;
         }
         file << "</svg>" << std::endl;
         file.close();

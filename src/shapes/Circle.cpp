@@ -7,7 +7,7 @@ void Circle::scale(double factor) {
     this->radius *= factor;
 }
 
-void Circle::rotate(Point& p, double angle) {
+void Circle::rotate(const Point& p, double angle) {
     // There is no point in rotating a circle    
 }
 

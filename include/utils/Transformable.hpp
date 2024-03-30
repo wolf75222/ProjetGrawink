@@ -9,8 +9,8 @@ public:
     Transformable() = default;
     ~Transformable() = default;
 
-    virtual void translate(Point& p) = 0;
-    virtual void rotate(Point& p, double angle) = 0;
+    virtual void translate(const Point& p) = 0;
+    virtual void rotate(const Point& p, double angle) = 0;
     virtual void scale(double factor) = 0;
 };
 
@@ -28,12 +28,12 @@ public:
     double getX() const { return x; }
     double getY() const { return y; }
 
-    void translate(Point& p) {
+    void translate(const Point& p) override {
         this->x += p.x;
         this->y += p.y;
     }
 
-    void rotate(Point& p, double angle) {
+    void rotate(const Point& p, double angle) override {
         double angl = angle * 3.141592653 / 180.0;
         double newX = p.x + (x - p.x) * std::cos(angl) - (y - p.y) * std::sin(angl);
         double newY = p.y + (x - p.x) * std::sin(angl) + (y - p.y) * std::cos(angl);
