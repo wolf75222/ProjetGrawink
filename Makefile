@@ -23,11 +23,11 @@ $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT) $(HEADERS)
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
 clean:
-	@echo " Cleaning...";
+	@echo "Cleaning...";
 	$(RM) -r $(BUILDDIR) $(TARGETDIR)
 
 run: $(TARGET)
-	@echo " Running..."
+	@echo "Running..."
 	./$(TARGET)
 
 .PHONY: clean run
