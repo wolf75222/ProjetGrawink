@@ -1,41 +1,39 @@
 #include <iostream>
-#include "../include/utils/Color.hpp"
 #include "../include/Grawink.hpp"
+#include "../include/utils/Color.hpp"
+#include "../include/shapes/Shapes.hpp"
+#include <memory>
 
 int main() {
     GrawEditor& editor = GrawEditor::GetEditor();
-
+    
     Point center = Point(50, 50);
     Point translate = Point(10, 10);
 
-    Color red = Color(255, 0, 0, 1);
-    Color blue = Color(0, 0, 255, 1);
-    Color white = Color(255, 255, 255, 1);
-    Color black = Color(0, 0, 0, 1);
+    Circle* s1 = new Circle(1, center, 10, 0);
+    Ellipse* s2 = new Ellipse(2, center, 20, 10, 0);
+    Rectangle* s3 = new Rectangle(3, center, 20, 10, 0);
 
-    // Circle* s = new Circle(1, center, 10, 0);
-    // Ellipse* s = new Ellipse(1, center, 20, 10, 0);
-    // Rectangle* s = new Rectangle(1, center, 20, 10, 0);
-    Polygon* s = new Polygon(
-        1,
-        center,
-        0,
-        Point(50, 10),
-        Point(90, 35),
-        Point(80, 90),
-        Point(20, 90),
-        Point(10, 35)
-    );
-    s->translate(translate);
-    s->scale(0.5);
-    s->setFillColor(white);
-    s->setStrokeColor(red);
-    s->setStrokeWidth(3);
+    // Adding shapes s1 
+    editor.Add<Circle>(&s1);
 
-    Point shape_center = s->getCenter();
-    s->rotate(shape_center, 45);
+    // Deleting a shape
+    editor.Delete(1); // Assuming the ID of the shape to be deleted is 1
 
-    std::cout << s->draw() << std::endl;
+    // Resizing and cropping the canvas
+    editor.Resize(800, 600); // Resize the canvas to 800x600
+    editor.Crop(100, 100, 400, 300); // Crop the canvas to a region defined by the rectangle (100,100) to (400,300)
+
+    // Selecting shapes and printing
+    editor.Select(GrawEditor::ShapeType::All); // Select all shapes // Select all shapes
+    editor.Print(); // Print the details of the selected shapes
+
+    // Exporting to SVG
+    editor.ExportSVG("shapes_output.svg");
+
+    // Testing Undo/Redo functionality
+    editor.Undo(2); // Undo the last two actions
+    editor.Redo(1); // Redo one action
 
     return 0;
 }

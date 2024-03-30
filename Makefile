@@ -12,7 +12,7 @@ HEADEREXT := hpp
 SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
 HEADERS := $(shell find $(INCDIR) -type f -name *.$(HEADEREXT))
 OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
-CXXFLAGS := -std=c++11 -I$(INCDIR)
+CXXFLAGS := -std=c++17 -I$(INCDIR)
 
 $(TARGET): $(OBJECTS)
 	@mkdir -p $(TARGETDIR)
