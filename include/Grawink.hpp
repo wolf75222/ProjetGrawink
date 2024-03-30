@@ -1,5 +1,5 @@
-#ifndef _GRAWINK_H_
-#define _GRAWINK_H_
+
+
 
 #include <vector>
 #include <memory>
@@ -35,8 +35,10 @@ public:
         return instance;
     };
     // Ajoute un nouvel objet au canevas
-    template <typename Shape, typename... Args>
-    GrawEditor &Add(Args &&...args);
+    GrawEditor& Add(std::shared_ptr<Shape> shape);
+
+    // Ajoute n objets au canevas
+    GrawEditor &Add(std::vector<std::shared_ptr<Shape>> shapes);
 
     // Supprime un objet du canevas par son identifiant ou référence
     GrawEditor &Delete(int shapeId);
@@ -87,4 +89,3 @@ protected:
     ShapeType selectedShapes = ShapeType::All;
 };
 
-#endif /* _GRAWINK_H_ */

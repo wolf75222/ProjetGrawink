@@ -2,18 +2,36 @@
 #include <iostream>
 #include <fstream>
 
-template <typename Shape, typename... Args>
-GrawEditor &GrawEditor::Add(Args &&...args)
-{ 
-    auto shape = GetNew<Shape>(std::forward<Args>(args)...);
-    shapes.push_back(std::move(shape));
+GrawEditor& GrawEditor::Add(std::shared_ptr<Shape> shape) {
+    shapes.push_back(shape);
+    addedShapes.push_back(shape);
+
+    return GetEditor();
+}
+
+GrawEditor &GrawEditor::Add(std::vector<std::shared_ptr<Shape>> shapes)
+{
+    for (const auto &shape : shapes)
+    {
+        this->shapes.push_back(shape);
+        addedShapes.push_back(shape);
+    }
+
     return GetEditor();
 }
 
 GrawEditor &GrawEditor::Delete(int shapeId)
 {
-    // Supprimer la forme correspondant à l'identifiant
-    shapes.erase(shapes.begin() + shapeId);
+    auto it = std::find_if(shapes.begin(), shapes.end(), [shapeId](const std::shared_ptr<Shape> &shape) {
+        return shape->getId() == shapeId;
+    });
+
+    if (it != shapes.end())
+    {
+        removedShapes.push_back(std::move(*it));
+        shapes.erase(it);
+    }
+
     return GetEditor();
 }
 
