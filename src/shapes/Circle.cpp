@@ -7,18 +7,22 @@ void Circle::scale(double factor) {
     this->radius *= factor;
 }
 
-std::string Circle::draw() {
+void Circle::rotate(Point& p, double angle) {
+    // There is no point in rotating a circle    
+}
+
+std::string Circle::draw() const {
     std::stringstream ss;
     
     ss << "<circle id=\"" <<
     id << "\" cx=\"" << 
-    x << "\" cy=\"" << 
-    y << "\" r=\"" << 
+    center.getX() << "\" cy=\"" << 
+    center.getY() << "\" r=\"" << 
     radius << "\" fill=\"" << 
-    color.asSVG() << "\" stroke=\"" << 
+    fill.asSVG() << "\" stroke=\"" << 
     stroke.asSVG() << "\" stroke-width=\"" << 
-    stroke_width << "transform=\"rotate(" <<
-    angle << " " << x << " " << y << ")\"/>";
+    stroke_width << "\" transform=\"rotate(" <<
+    angle << " " << center.getX() << " " << center.getY() << ")\"/>";
     
     return ss.str();
 }

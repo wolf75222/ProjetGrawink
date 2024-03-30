@@ -4,22 +4,53 @@
 #include "../../include/shapes/Polygon.hpp"
 
 void Polygon::scale(double factor) {
-    this->setCenter();
     for (Point& vertex : vertices) {
         vertex.scale(factor);
     }
 }
 
-void Polygon::translate(double x, double y) {
-    this->setCenter();
+void Polygon::translate(Point& p) {
     for (Point& vertex : vertices) {
-        vertex.translate(x, y);
+        vertex.translate(p);
     }
 }
 
-void Polygon::rotate(double angle) {
-    this->setCenter();
+void Polygon::rotate(Point& p, double angle) {
     for (Point& vertex : vertices) {
-        vertex.rotate(this->x, this->y, angle);
+        vertex.rotate(p, angle);
     }
+    this->angle = angle;
+}
+
+Point Polygon::getCenter() const {
+    double sum_x = 0.0;
+    double sum_y = 0.0;
+    for (const Point& point : vertices) {
+        sum_x += point.getX();
+        sum_y += point.getY();
+    }
+    double center_x = sum_x / vertices.size();
+    double center_y = sum_y / vertices.size();
+        
+    return Point(center_x, center_y);
+}
+
+
+std::string Polygon::draw() const {
+    std::stringstream ss;
+    
+    ss << "<polygon id=\"" <<
+    id << "\" points=\"";
+
+    for(const Point& vertex : vertices) {
+        ss << vertex.getX() << "," << vertex.getY() << " ";
+    }
+
+    ss << "\" fill=\"" << 
+    fill.asSVG() << "\" stroke=\"" << 
+    stroke.asSVG() << "\" stroke-width=\"" << 
+    stroke_width << "\" transform=\"rotate(" <<
+    angle << " " << center.getX() << " " << center.getY() << ")\"/>";
+    
+    return ss.str();
 }

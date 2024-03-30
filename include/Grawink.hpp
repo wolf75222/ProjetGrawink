@@ -1,9 +1,11 @@
+#pragma once
+
 #ifndef _GRAWINK_H_
 #define _GRAWINK_H_
 
 #include <vector>
 #include <memory> 
-#include "Shapes.hpp" 
+#include "./shapes/Shapes.hpp" 
 
 class GrawEditor {
 public:

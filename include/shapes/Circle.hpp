@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Shape.hpp"
 
 class Circle : public Shape {
@@ -5,10 +7,10 @@ private:
     double radius = 1.0;
 
 public:
-    Circle(int _id, double _x, double _y, double _size, double _angle, double _radius) : Shape(_id, _x, _y, _size, _angle), radius(_radius) {};
+    Circle(int _id, Point& _center, double _radius, double _angle) : Shape(_id, _center, _angle), radius(_radius) {};
 
     void scale(double factor) override;
-    void rotate(double angle) override = 0;
+    void rotate(Point& p, double angle) override;
     
-    std::string draw() override;
+    std::string draw() const override;
 };

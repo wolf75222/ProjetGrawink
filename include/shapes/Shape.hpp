@@ -1,22 +1,36 @@
-#include "../utils/Color.hpp"
-#include "../utils/Drawable.hpp"
+#pragma once
 
-class Shape : public Drawable {
+#include "../utils/Drawable.hpp"
+#include "../utils/Transformable.hpp"
+
+class Shape : public Drawable, Transformable {
 protected:
     int id;
-    double x = 0.0;
-    double y = 0.0;
-    double size = 1.0;
     double angle = 0.0;
 
+    Point& center;
+    Color fill = Color();
+    Color stroke = Color();
+
+    double stroke_width = 1.0;
+
 public:
-    Shape(int _id, double _x, double _y, double _size, double _angle) : id(_id), x(_x), y(_y), size(_size), angle(_angle) {};
+    Shape(int _id, Point& _center, double _angle) : id(_id), center(_center), angle(_angle) {};
 
-    virtual void scale(double factor) = 0;
-    virtual void translate(double x, double y);
-    virtual void rotate(double angle);
+    virtual Point getCenter() const { return center; }
+    virtual void setCenter(Point& p) { center = p; }
 
-    int getId() {
-        return this->id;
-    };
+    void translate(Point& p) override;
+    void rotate(Point& p, double angle) override;
+    void scale(double factor) override = 0;
+
+    const Color& getFillColor() const { return fill; }
+    const Color& getStrokeColor() const { return stroke; }
+    double getStrokeWidth() const { return stroke_width; }
+    
+    void setFillColor(Color& color) { fill = color; }
+    void setStrokeColor(Color& color) { stroke = color; }
+    void setStrokeWidth(double width) { stroke_width = width; }
+
+    int getId() const { return this->id; };
 };

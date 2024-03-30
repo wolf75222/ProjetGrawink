@@ -3,24 +3,24 @@
 
 #include "../../include/shapes/Rectangle.hpp"
 
-void Ellipse::scale(double factor) {
+void Rectangle::scale(double factor) {
     this->height *= factor;
     this->width *= factor;
 }
 
-std::string Ellipse::draw() {
+std::string Rectangle::draw() const {
     std::stringstream ss;
     
     ss << "<rect id=\"" <<
     id << "\" x=\"" << 
-    x << "\" y=\"" << 
-    y << "\" width=\"" << 
+    center.getX() << "\" y=\"" << 
+    center.getY() << "\" width=\"" << 
     width << "\" height=\"" << 
     height << "\" fill=\"" << 
-    color.asSVG() << "\" stroke=\"" << 
+    fill.asSVG() << "\" stroke=\"" << 
     stroke.asSVG() << "\" stroke-width=\"" << 
-    stroke_width << "transform=\"rotate(" <<
-    angle << " " << x << " " << y << ")\"/>";
+    stroke_width << "\" transform=\"rotate(" <<
+    angle << " " << center.getX() << " " << center.getY() << ")\"/>";
     
     return ss.str();
 }

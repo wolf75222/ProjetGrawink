@@ -8,19 +8,19 @@ void Ellipse::scale(double factor) {
     this->width *= factor;
 }
 
-std::string Ellipse::draw() {
+std::string Ellipse::draw() const {
     std::stringstream ss;
     
     ss << "<ellipse id=\"" <<
     id << "\" cx=\"" << 
-    x << "\" cy=\"" << 
-    y << "\" rx=\"" << 
+    center.getX() << "\" cy=\"" << 
+    center.getY() << "\" rx=\"" << 
     width << "\" ry=\"" << 
     height << "\" fill=\"" << 
-    color.asSVG() << "\" stroke=\"" << 
+    fill.asSVG() << "\" stroke=\"" << 
     stroke.asSVG() << "\" stroke-width=\"" << 
-    stroke_width << "transform=\"rotate(" <<
-    angle << " " << x << " " << y << ")\"/>";
+    stroke_width << "\" transform=\"rotate(" <<
+    angle << " " << center.getX() << " " << center.getY() << ")\"/>";
     
     return ss.str();
 }

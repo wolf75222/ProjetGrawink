@@ -1,38 +1,42 @@
-#include "Color.hpp"
+#pragma once
 
+#include "Color.hpp"
 #include <string>
 
 class Drawable {
 protected:
-    double stroke_width = 1;
-    Color stroke;
-    Color color;
+    // double stroke_width = 1;
+    // Color stroke;
+    // Color color;
 
 public:
-    virtual std::string draw() = 0;
-    virtual void erase() = 0;
+    Drawable() = default;
+    ~Drawable() = default;
 
-    void setStrokeWidth(double width) {
-        this->stroke_width = width;
-    }
+    virtual std::string draw() const = 0;
+    // virtual void erase() = 0;
 
-    void setStrokeColor(Color& color){
-        this->stroke = color;
-    }
+    // void setStrokeWidth(double width) {
+    //     this->stroke_width = width;
+    // }
 
-    void setColor(Color& color){
-        this->color = color;
-    }
+    // void setStrokeColor(Color& color){
+    //     this->stroke = color;
+    // }
 
-    double getStrokeWidth() {
-        return this->stroke_width;
-    };
+    // void setColor(Color& color){
+    //     this->color = color;
+    // }
 
-    Color& getStrokeColor() {
-        return this->stroke;
-    };
+    // double getStrokeWidth() {
+    //     return this->stroke_width;
+    // };
 
-    Color& getColor() {
-        return this->color;
-    };
+    // Color& getStrokeColor() {
+    //     return this->stroke;
+    // };
+
+    // Color& getColor() {
+    //     return this->color;
+    // };
 };

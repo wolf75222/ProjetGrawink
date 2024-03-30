@@ -1,20 +1,33 @@
-CXX = g++
-CXXFLAGS = -Iinclude -std=c++11 -Wall
-LDFLAGS =
-SRC = $(wildcard src/*.cpp src/**/*.cpp)
-OBJ = $(SRC:src/%.cpp=build/%.o)
-EXEC = $(project_name)
+CXX := g++
 
-all: $(EXEC)
+SRCDIR := src
+INCDIR := include
+BUILDDIR := build
+TARGETDIR := bin
 
-$(EXEC): $(OBJ)
-	$(CXX) $(LDFLAGS) -o $@ $^
+TARGET := $(TARGETDIR)/program
 
-build/%.o: src/%.cpp
-	mkdir -p $(dir $@)
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+SRCEXT := cpp
+HEADEREXT := hpp
+SOURCES := $(shell find $(SRCDIR) -type f -name *.$(SRCEXT))
+HEADERS := $(shell find $(INCDIR) -type f -name *.$(HEADEREXT))
+OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
+CXXFLAGS := -std=c++11 -I$(INCDIR)
+
+$(TARGET): $(OBJECTS)
+	@mkdir -p $(TARGETDIR)
+	$(CXX) $^ -o $(TARGET)
+
+$(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT) $(HEADERS)
+	@mkdir -p $(dir $@)
+	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
 clean:
-	rm -rf build $(EXEC)
+	@echo " Cleaning...";
+	$(RM) -r $(BUILDDIR) $(TARGETDIR)
 
-.PHONY: all clean
+run: $(TARGET)
+	@echo " Running..."
+	./$(TARGET)
+
+.PHONY: clean run
