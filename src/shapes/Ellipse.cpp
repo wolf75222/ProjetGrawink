@@ -24,3 +24,7 @@ std::string Ellipse::draw() const {
     
     return ss.str();
 }
+
+bool Ellipse::isOutside(int x, int y, int width, int height) const {
+    return (center.getX() + this->width < x || center.getX() - this->width > x + width || center.getY() + this->height < y || center.getY() - this->height > y + height);
+}

@@ -1,0 +1,58 @@
+\doxysection{Transformable.\+hpp}
+\hypertarget{_transformable_8hpp_source}{}\label{_transformable_8hpp_source}\index{include/utils/Transformable.hpp@{include/utils/Transformable.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_point}{Point}};}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_transformable}{Transformable}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_transformable}{Transformable}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_transformable}{\string~Transformable}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_transformable_acbf45ddb308cb0ca2301f92d01ec3ef4}{translate}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_point}{Point}}\&\ p)\ =\ 0;}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_transformable_a196b92535292a051ef19cbe9f2eb9db9}{rotate}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_point}{Point}}\&\ p,\ \textcolor{keywordtype}{double}\ angle)\ =\ 0;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_transformable_ad708908e8b550aa1ec5822877341e5ad}{scale}}(\textcolor{keywordtype}{double}\ factor)\ =\ 0;}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_point}{Point}}\ :\ \mbox{\hyperlink{class_transformable}{Transformable}}\ \{}
+\DoxyCodeLine{00048\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{double}\ x\ =\ 0.0;\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{double}\ y\ =\ 0.0;\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{class_point_a483cf6bf601889eb922e89f5820045c1}{Point}}(\textcolor{keywordtype}{double}\ \_x,\ \textcolor{keywordtype}{double}\ \_y)\ :\ x(\_x),\ y(\_y)\ \{\};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_point_a9aa66c310860d038cb1258dc5cd80906}{setX}}(\textcolor{keywordtype}{double}\ x)\ \{\ this-\/>x\ =\ x;\ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_point_a7d1ee63237f361d41e697f87c3cb051d}{setY}}(\textcolor{keywordtype}{double}\ y)\ \{\ this-\/>y\ =\ y;\ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_point_a655794dd595a4821987664bf1d9010e8}{getX}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ x;\ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_point_aa323a12bec85e28ce6575dccec4f8b28}{getY}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ y;\ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_point_a9d527bcf4f65077135f026add703575f}{translate}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_point}{Point}}\&\ p)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ this-\/>x\ +=\ p.x;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ this-\/>y\ +=\ p.y;}
+\DoxyCodeLine{00097\ \ \ \ \ \}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_point_a8718c325f1fdaa4093413dc834b56ce6}{rotate}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_point}{Point}}\&\ p,\ \textcolor{keywordtype}{double}\ angle)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ angl\ =\ angle\ *\ 3.141592653\ /\ 180.0;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ newX\ =\ p.x\ +\ (x\ -\/\ p.x)\ *\ std::cos(angl)\ -\/\ (y\ -\/\ p.y)\ *\ std::sin(angl);}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ newY\ =\ p.y\ +\ (x\ -\/\ p.x)\ *\ std::sin(angl)\ +\ (y\ -\/\ p.y)\ *\ std::cos(angl);}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ x\ =\ newX;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ y\ =\ newY;}
+\DoxyCodeLine{00111\ \ \ \ \ \}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_point_ac6f2dff4fd2dfed407e1c22ff5a5cc34}{scale}}(\textcolor{keywordtype}{double}\ factor)\textcolor{keyword}{\ override}\{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ this-\/>x\ *=\ factor;}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ this-\/>y\ *=\ factor;}
+\DoxyCodeLine{00121\ \ \ \ \ \}}
+\DoxyCodeLine{00122\ \};}
+
+\end{DoxyCode}

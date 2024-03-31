@@ -1,0 +1,122 @@
+\doxysection{Grawink.\+hpp}
+\hypertarget{_grawink_8hpp_source}{}\label{_grawink_8hpp_source}\index{include/Grawink.hpp@{include/Grawink.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}shapes/Shape.hpp"{}}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_graw_editor}{GrawEditor}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{class_graw_editor_acb3191f6fbba6925421cf319b6b52c6e}{ShapeType}}\ :\ uint64\_t}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ Stroke\ =\ 1ULL\ <<\ 0,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ Triangle\ =\ 1ULL\ <<\ 1,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rectangle}{Rectangle}}\ =\ 1ULL\ <<\ 2,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ Pentagon\ =\ 1ULL\ <<\ 3,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ Hexagon\ =\ 1ULL\ <<\ 4,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ Heptagon\ =\ 1ULL\ <<\ 5,}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ Octogon\ =\ 1ULL\ <<\ 6,}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ Ellipsis\ =\ 1ULL\ <<\ 7,}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_polygon}{Polygon}}\ =\ 1ULL\ <<\ 8,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ All\ =\ \string~0ULL}
+\DoxyCodeLine{00039\ \ \ \ \ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_graw_editor}{GrawEditor}}\ \&\mbox{\hyperlink{class_graw_editor_a6d5fa1edd21192f8a33a3cce31f3b610}{GetEditor}}()}
+\DoxyCodeLine{00047\ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_graw_editor}{GrawEditor}}\ instance;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00050\ \ \ \ \ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{class_graw_editor}{GrawEditor}}\ \&\mbox{\hyperlink{class_graw_editor_a743db1fae115318bb5c99dc4ba8ee8e9}{add}}(std::shared\_ptr<Shape>\ shape);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{class_graw_editor}{GrawEditor}}\ \&\mbox{\hyperlink{class_graw_editor_a743db1fae115318bb5c99dc4ba8ee8e9}{add}}(std::vector<std::shared\_ptr<Shape>>\ shapes);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{class_graw_editor}{GrawEditor}}\ \&\mbox{\hyperlink{class_graw_editor_aae8db8b911524798f60df3852bffecef}{remove}}(\textcolor{keywordtype}{int}\ shapeId);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{class_graw_editor}{GrawEditor}}\ \&\mbox{\hyperlink{class_graw_editor_a64bfed5cb2b9d3fd6d2078c65da645ff}{undo}}(\textcolor{keywordtype}{size\_t}\ steps\ =\ 1);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{//\ Réinsère\ le\ dernier\ objet\ supprimé}}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{class_graw_editor}{GrawEditor}}\ \&\mbox{\hyperlink{class_graw_editor_a93569e4d97cf2c683ec06c697cbaa129}{redo}}(\textcolor{keywordtype}{size\_t}\ steps\ =\ 1);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{comment}{//\ Redimensionne\ le\ canevas}}
+\DoxyCodeLine{00096\ \ \ \ \ \mbox{\hyperlink{class_graw_editor}{GrawEditor}}\ \&\mbox{\hyperlink{class_graw_editor_ae448c08b6275bc7844a64d3ebb3d4654}{resize}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_graw_editor_a2df0eadb890d8c006e0639405b3ba82f}{width}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_graw_editor_a046a3d79d088ba969b0c3494644fb8eb}{height}});}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//\ Redimensionne\ le\ canevas\ en\ supprimant\ les\ objets\ extérieurs}}
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{class_graw_editor}{GrawEditor}}\ \&\mbox{\hyperlink{class_graw_editor_a9183b0b6ac1c1c469f27150d76755ffe}{crop}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_graw_editor_a2df0eadb890d8c006e0639405b3ba82f}{width}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_graw_editor_a046a3d79d088ba969b0c3494644fb8eb}{height}});}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{comment}{//\ Sélectionne\ les\ objets\ à\ exporter/afficher.}}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{//\ La\ sélection\ pourra\ se\ faire\ sous\ la\ forme\ d'une\ disjonction\ ("{}OU"{}\ binaires)\ de\ \`{}enum\ ShapeType`.}}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//\ Par\ exemple\ pour\ sélectionner\ uniquement\ les\ triangles,\ les\ rectangles\ et\ les\ octogones,\ on\ pourra\ passer\ en\ paramètre\ :}}
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//\ \ ShapeType::Triangle\ |\ ShapeType::Rectangle\ |\ ShapeType::Octogon,\ ou}}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//\ \ bien\ l'équivalent\ en\ hexadécimal\ (0x46ULL),\ ou\ en\ décimal\ (70ULL).}}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//\ Passer\ ShapeType::All\ resélectionne\ l'ensemble\ des\ formes\ du\ canevas.}}
+\DoxyCodeLine{00121\ \ \ \ \ \mbox{\hyperlink{class_graw_editor}{GrawEditor}}\ \&\mbox{\hyperlink{class_graw_editor_af0baeb44411f6ddd57d33e661de41695}{select}}(\mbox{\hyperlink{class_graw_editor_acb3191f6fbba6925421cf319b6b52c6e}{ShapeType}}\ types);}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{comment}{//\ Affiche\ l'ensemble\ des\ objets\ contenus\ dans\ le\ canevas,\ triés\ par\ catégorie}}
+\DoxyCodeLine{00130\ \ \ \ \ \mbox{\hyperlink{class_graw_editor}{GrawEditor}}\ \&\mbox{\hyperlink{class_graw_editor_adcfa13925c60914ca1e3f7fc62d207f6}{print}}();}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{comment}{//\ Écrit\ le\ code\ SVG\ résultant\ des\ objets\ contenus\ dans\ le\ canevas}}
+\DoxyCodeLine{00138\ \ \ \ \ \mbox{\hyperlink{class_graw_editor}{GrawEditor}}\ \&\mbox{\hyperlink{class_graw_editor_a1951c12a6ca7424787ab91878985b74b}{draw}}(\textcolor{keyword}{const}\ std::string\ \&filename);}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{comment}{//\ Crée\ une\ nouvelle\ instance\ de\ la\ classe\ \`{}Shape`\ (i.e.\ Rectangle,}}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{comment}{//\ Triangle,\ Stroke,\ Circle,\ etc.)\ et\ retourne\ un\ pointeur\ vers\ l'objet\ nouvellement\ alloué.}}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{comment}{//\ Cet\ objet\ peut\ ensuite\ être\ transformé,\ passé\ en\ paramètre\ à\ \`{}Add`\ ou\ à\ \`{}Delete`.}}
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{comment}{//\ template\ <typename\ Shape>\ Shape\ *GetNew(\ /*\ à\ vous\ de\ définir\ les\ paramètres\ */\ );}}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{comment}{//\ avec\ des\ \ surcharges\ de\ getNew\ pour\ les\ différents\ objets}}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ \mbox{\hyperlink{class_shape}{Shape}},\ \textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00153\ \ \ \ \ std::shared\_ptr<Shape>\ \mbox{\hyperlink{class_graw_editor_a80fa845fd089c9929080b05285469e07}{getNew}}(Args\&\&...\ args)\ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_shared<Shape>(std::forward<Args>(args)...);}
+\DoxyCodeLine{00155\ \ \ \ \ \}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00158\ \ \ \ \ }
+\DoxyCodeLine{00164\ \ \ \ \ \mbox{\hyperlink{class_graw_editor_af207f83d1f3a445677eda9393d75bade}{\string~GrawEditor}}();\ \textcolor{comment}{//\ Destructeur}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_graw_editor_a9a0d34513310ed9ac5e2e2d1461acf18}{GetShapeCount}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ Renvoie\ le\ nombre\ d'objets\ contenus\ dans\ le\ canevas}}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_graw_editor_a52edecea72ea91504eb36ce787de3dfc}{GetSelectedShapeCount}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ Renvoie\ le\ nombre\ d'objets\ sélectionnés}}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graw_editor_a2bda0d9746440420ca1bc732c81573f2}{reset}}();\ \textcolor{comment}{//\ Réinitialise\ le\ canevas}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{comment}{//\ Renvoie\ une\ chaîne\ de\ caractères\ représentant\ le\ type\ de\ forme}}
+\DoxyCodeLine{00192\ \ \ \ \ std::string\ \mbox{\hyperlink{class_graw_editor_a2d0d39fdcc6c665aa3ee0c30395e46b4}{ShapeTypeToString}}(\mbox{\hyperlink{class_graw_editor_acb3191f6fbba6925421cf319b6b52c6e}{ShapeType}}\ type);}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{comment}{//\ Convertit\ un\ type\ de\ forme\ en\ ShapeType}}
+\DoxyCodeLine{00200\ \ \ \ \ \mbox{\hyperlink{class_graw_editor_acb3191f6fbba6925421cf319b6b52c6e}{ShapeType}}\ \mbox{\hyperlink{class_graw_editor_a91e28d3cf79e8a62dc5355c6f1ecb457}{ConvertShapeType}}(\mbox{\hyperlink{class_shape_a25f91a0290232b396edfafe9bdb26389}{Shape::ShapeType}}\ type);}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_graw_editor_a5a2691be2afa8367271eee050455907b}{GetWidth}}()\ \textcolor{keyword}{const};\ \ \textcolor{comment}{//\ Renvoie\ la\ largeur\ du\ canevas}}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_graw_editor_afa8388f9f4e130985097a1c3df6908ff}{GetHeight}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ Renvoie\ la\ hauteur\ du\ canevas}}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00216\ \textcolor{comment}{\ \ \ \ *\ Constructeur\ privé\ pour\ le\ singleton}}
+\DoxyCodeLine{00217\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00218\ \ \ \ \ \mbox{\hyperlink{class_graw_editor}{GrawEditor}}()\ =\ \textcolor{keywordflow}{default};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Constructeur\ privé\ pour\ le\ singleton}}
+\DoxyCodeLine{00219\ \ \ \ \ \mbox{\hyperlink{class_graw_editor}{GrawEditor}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_graw_editor}{GrawEditor}}\ \&)\ =\ \textcolor{keyword}{delete};\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Supprime\ le\ constructeur\ de\ copie}}
+\DoxyCodeLine{00220\ \ \ \ \ \mbox{\hyperlink{class_graw_editor}{GrawEditor}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_graw_editor}{GrawEditor}}\ \&)\ =\ \textcolor{keyword}{delete};\ \textcolor{comment}{//\ Supprime\ l'opérateur\ d'affectation}}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{comment}{//\ Stockage\ des\ formes}}
+\DoxyCodeLine{00223\ \ \ \ \ std::vector<std::shared\_ptr<Shape>>\ shapes;\ }
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ \ \ \ \ \textcolor{comment}{//\ Stockage\ des\ formes\ ajoutées\ et\ supprimées\ pour\ les\ opérations\ Undo/Redo}}
+\DoxyCodeLine{00226\ \ \ \ \ std::list<std::shared\_ptr<Shape>>\ addedShapes;\ }
+\DoxyCodeLine{00227\ \ \ \ \ std::list<std::shared\_ptr<Shape>>\ removedShapes;\ }
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{comment}{//\ Stockage\ des\ formes\ sélectionnées}}
+\DoxyCodeLine{00230\ \ \ \ \ std::vector<std::shared\_ptr<Shape>>\ selectedShapes;\ }
+\DoxyCodeLine{00231\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_graw_editor_a2df0eadb890d8c006e0639405b3ba82f}{width}}\ =\ 600;\ }
+\DoxyCodeLine{00233\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_graw_editor_a046a3d79d088ba969b0c3494644fb8eb}{height}}\ =\ 400;\ }
+\DoxyCodeLine{00234\ \};}
+
+\end{DoxyCode}

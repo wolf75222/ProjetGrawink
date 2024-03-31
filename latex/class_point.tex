@@ -1,0 +1,198 @@
+\doxysection{Point Class Reference}
+\hypertarget{class_point}{}\label{class_point}\index{Point@{Point}}
+
+
+The \doxylink{class_point}{Point} class represents a point in 2D space.  
+
+
+
+
+{\ttfamily \#include $<$Transformable.\+hpp$>$}
+
+
+
+Inheritance diagram for Point\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{class_point__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Point\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{class_point__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_point_a483cf6bf601889eb922e89f5820045c1}{Point}} (double \+\_\+x, double \+\_\+y)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_point}{Point} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_point_a9aa66c310860d038cb1258dc5cd80906}{setX}} (double x)
+\begin{DoxyCompactList}\small\item\em Set the x-\/coordinate of the point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_point_a7d1ee63237f361d41e697f87c3cb051d}{setY}} (double y)
+\begin{DoxyCompactList}\small\item\em Set the y-\/coordinate of the point. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_point_a655794dd595a4821987664bf1d9010e8}{getX}} () const
+\begin{DoxyCompactList}\small\item\em Get the x-\/coordinate of the point. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_point_aa323a12bec85e28ce6575dccec4f8b28}{getY}} () const
+\begin{DoxyCompactList}\small\item\em Get the y-\/coordinate of the point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_point_a9d527bcf4f65077135f026add703575f}{translate}} (const \mbox{\hyperlink{class_point}{Point}} \&p) override
+\begin{DoxyCompactList}\small\item\em Translate the point by a given point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_point_a8718c325f1fdaa4093413dc834b56ce6}{rotate}} (const \mbox{\hyperlink{class_point}{Point}} \&p, double angle) override
+\begin{DoxyCompactList}\small\item\em Rotate the point around a given point by a given angle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_point_ac6f2dff4fd2dfed407e1c22ff5a5cc34}{scale}} (double factor) override
+\begin{DoxyCompactList}\small\item\em Scale the point by a given factor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_point}{Point} class represents a point in 2D space. 
+
+The \doxylink{class_point}{Point} class represents a point in 2D space with x and y coordinates. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_point_a483cf6bf601889eb922e89f5820045c1}\label{class_point_a483cf6bf601889eb922e89f5820045c1} 
+\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{Point()}{Point()}}
+{\footnotesize\ttfamily Point\+::\+Point (\begin{DoxyParamCaption}\item[{double}]{\+\_\+x,  }\item[{double}]{\+\_\+y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \doxylink{class_point}{Point} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+x} & The x-\/coordinate of the point. \\
+\hline
+{\em \+\_\+y} & The y-\/coordinate of the point. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_point_a655794dd595a4821987664bf1d9010e8}\label{class_point_a655794dd595a4821987664bf1d9010e8} 
+\index{Point@{Point}!getX@{getX}}
+\index{getX@{getX}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily double Point\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the x-\/coordinate of the point. 
+
+\begin{DoxyReturn}{Returns}
+The x-\/coordinate of the point. 
+\end{DoxyReturn}
+\Hypertarget{class_point_aa323a12bec85e28ce6575dccec4f8b28}\label{class_point_aa323a12bec85e28ce6575dccec4f8b28} 
+\index{Point@{Point}!getY@{getY}}
+\index{getY@{getY}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily double Point\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the y-\/coordinate of the point. 
+
+\begin{DoxyReturn}{Returns}
+The y-\/coordinate of the point. 
+\end{DoxyReturn}
+\Hypertarget{class_point_a8718c325f1fdaa4093413dc834b56ce6}\label{class_point_a8718c325f1fdaa4093413dc834b56ce6} 
+\index{Point@{Point}!rotate@{rotate}}
+\index{rotate@{rotate}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Point\+::rotate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_point}{Point}} \&}]{p,  }\item[{double}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rotate the point around a given point by a given angle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The point to rotate the point around. \\
+\hline
+{\em angle} & The angle to rotate the point by. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_transformable_a196b92535292a051ef19cbe9f2eb9db9}{Transformable}}.
+
+\Hypertarget{class_point_ac6f2dff4fd2dfed407e1c22ff5a5cc34}\label{class_point_ac6f2dff4fd2dfed407e1c22ff5a5cc34} 
+\index{Point@{Point}!scale@{scale}}
+\index{scale@{scale}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily void Point\+::scale (\begin{DoxyParamCaption}\item[{double}]{factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Scale the point by a given factor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em factor} & The factor to scale the point by. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_transformable_ad708908e8b550aa1ec5822877341e5ad}{Transformable}}.
+
+\Hypertarget{class_point_a9aa66c310860d038cb1258dc5cd80906}\label{class_point_a9aa66c310860d038cb1258dc5cd80906} 
+\index{Point@{Point}!setX@{setX}}
+\index{setX@{setX}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{setX()}{setX()}}
+{\footnotesize\ttfamily void Point\+::setX (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the x-\/coordinate of the point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the point. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_point_a7d1ee63237f361d41e697f87c3cb051d}\label{class_point_a7d1ee63237f361d41e697f87c3cb051d} 
+\index{Point@{Point}!setY@{setY}}
+\index{setY@{setY}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{setY()}{setY()}}
+{\footnotesize\ttfamily void Point\+::setY (\begin{DoxyParamCaption}\item[{double}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the y-\/coordinate of the point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y} & The y-\/coordinate of the point. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_point_a9d527bcf4f65077135f026add703575f}\label{class_point_a9d527bcf4f65077135f026add703575f} 
+\index{Point@{Point}!translate@{translate}}
+\index{translate@{translate}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily void Point\+::translate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_point}{Point}} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Translate the point by a given point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The point to translate the point by. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_transformable_acbf45ddb308cb0ca2301f92d01ec3ef4}{Transformable}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/utils/Transformable.\+hpp\end{DoxyCompactItemize}

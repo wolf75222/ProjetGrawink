@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classtesting_1_1gmock__function__mocker__test_1_1_stack_interface.html" title=" " alt="" coords="5,39,231,79"/>
+<area shape="rect" id="Node000001" href="$classtesting_1_1gmock__function__mocker__test_1_1_legacy_mock_stack.html" title=" " alt="" coords="279,5,527,46"/>
+<area shape="poly" id="edge190_Node000000_Node000001" title=" " alt="" coords="246,41,278,38,278,43,246,47"/>
+<area shape="rect" id="Node000002" href="$classtesting_1_1gmock__function__mocker__test_1_1_mock_stack.html" title=" " alt="" coords="300,71,506,111"/>
+<area shape="poly" id="edge191_Node000000_Node000002" title=" " alt="" coords="246,71,300,77,299,82,246,76"/>
+</map>

@@ -1,0 +1,30 @@
+\doxysection{Color.\+hpp}
+\hypertarget{_color_8hpp_source}{}\label{_color_8hpp_source}\index{include/utils/Color.hpp@{include/utils/Color.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_color}{Color}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ red\ =\ 0;\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ green\ =\ 0;\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ blue\ =\ 0;\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{double}\ alpha\ =\ 1.0;\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_color_a6fae8aa8b75d27cb134234e75b41caf2}{Color}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_color_a42b090de08eb9186df2db7d10d24feb1}{Color}}(\textcolor{keywordtype}{int}\ \_red,\ \textcolor{keywordtype}{int}\ \_green,\ \textcolor{keywordtype}{int}\ \_blue,\ \textcolor{keywordtype}{double}\ \_alpha)\ :\ red(\_red),\ green(\_green),\ blue(\_blue),\ alpha(\_alpha)\ \{\};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ std::string\ \mbox{\hyperlink{class_color_a97cdf4c65defd69108b4188e0c9fe531}{asSVG}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ std::stringstream\ ss;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ ss\ <<\ \textcolor{stringliteral}{"{}rgba("{}}\ <<\ red\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ green\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ blue\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ alpha\ <<\ \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{00041\ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
+\DoxyCodeLine{00043\ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \};}
+
+\end{DoxyCode}

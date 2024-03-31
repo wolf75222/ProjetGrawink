@@ -1,0 +1,66 @@
+\chapter{Projet Grawink}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{Projet Grawink@{Projet Grawink}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+ \hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{Introduction}{Introduction}}\label{md__r_e_a_d_m_e_autotoc_md1}
+Le projet Grawink est une bibliothèque C++ conçue pour la création et la gestion de dessins SVG. Il permet aux utilisateurs de créer des dessins vectoriels en utilisant une variété de formes géométriques et de les exporter en format SVG. Cette bibliothèque vise à offrir une interface simple pour la programmation orientée objet et la manipulation graphique.\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{\texorpdfstring{Architecture du projet}{Architecture du projet}}\label{md__r_e_a_d_m_e_autotoc_md2}
+Le projet est structuré comme suit \+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ProjetGrawink/}
+\DoxyCodeLine{│}
+\DoxyCodeLine{├──\ Makefile\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Makefile\ pour\ compiler\ le\ projet}
+\DoxyCodeLine{├──\ build/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Dossier\ pour\ les\ fichiers\ objets\ compilés}
+\DoxyCodeLine{├──\ docs/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Documentation\ et\ diagrammes\ UML}
+\DoxyCodeLine{│\ \ \ └──\ UML/}
+\DoxyCodeLine{├──\ include/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Fichiers\ d'en-\/tête\ (.h)}
+\DoxyCodeLine{│\ \ \ ├──\ Grawink.h\ \ \ \ \ \ \ \ \ \ \#\ Classe\ principale\ de\ l'éditeur}
+\DoxyCodeLine{│\ \ \ ├──\ shapes/\ \ \ \ \ \ \ \ \ \ \ \ \#\ Définitions\ des\ formes\ géométriques}
+\DoxyCodeLine{│\ \ \ └──\ utils/\ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Utilitaires\ (comme\ l'export\ SVG)}
+\DoxyCodeLine{├──\ src/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Fichiers\ sources\ (.cpp)}
+\DoxyCodeLine{│\ \ \ ├──\ Grawink.cpp\ \ \ \ \ \ \ \ \#\ Implémentation\ de\ l'éditeur}
+\DoxyCodeLine{│\ \ \ ├──\ shapes/\ \ \ \ \ \ \ \ \ \ \ \ \#\ Implémentations\ des\ formes\ géométriques}
+\DoxyCodeLine{│\ \ \ └──\ utils/\ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Implémentations\ des\ utilitaires}
+\DoxyCodeLine{└──\ tests/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Tests\ unitaires}
+\DoxyCodeLine{\ \ \ \ └──\ test\_main.cpp}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{\texorpdfstring{To\+Do List}{To\+Do List}}\label{md__r_e_a_d_m_e_autotoc_md3}
+
+\begin{DoxyItemize}
+\item \mbox{[} \mbox{]} Définir la classe de base {\ttfamily \doxylink{class_shape}{Shape}} et ses méthodes.
+\item \mbox{[} \mbox{]} Implémenter les classes de formes géométriques \+: {\ttfamily \doxylink{class_circle}{Circle}}, {\ttfamily \doxylink{class_ellipse}{Ellipse}}, {\ttfamily \doxylink{class_polygon}{Polygon}}, {\ttfamily \doxylink{class_rectangle}{Rectangle}}, {\ttfamily Triangle}.
+\item \mbox{[} \mbox{]} Développer l\textquotesingle{}utilitaire {\ttfamily Svg\+Exporter} pour l\textquotesingle{}exportation SVG.
+\item \mbox{[} \mbox{]} Compléter l\textquotesingle{}implémentation de {\ttfamily Grawink}, le cœur de l\textquotesingle{}application.
+\item \mbox{[} \mbox{]} Écrire le code principal ({\ttfamily main.\+cpp}) pour tester la bibliothèque.
+\item \mbox{[} \mbox{]} Rédiger des tests unitaires pour valider les fonctionnalités ({\ttfamily test\+\_\+main.\+cpp}).
+\item \mbox{[} \mbox{]} Documenter le projet et finaliser le README.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{\texorpdfstring{Compilation et exécution}{Compilation et exécution}}\label{md__r_e_a_d_m_e_autotoc_md4}
+Pour compiler le projet, naviguez dans le répertoire racine du projet et exécutez \+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make}
+
+\end{DoxyCode}
+
+
+Cela générera un exécutable dans le dossier {\ttfamily build/}. Pour lancer l\textquotesingle{}application, exécutez \+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./build/...}
+
+\end{DoxyCode}
+ \hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{\texorpdfstring{Contribution}{Contribution}}\label{md__r_e_a_d_m_e_autotoc_md5}
+Nous accueillons les contributions au projet Grawink ! Si vous souhaitez contribuer, veuillez suivre les instructions suivantes \+:
+
+
+\begin{DoxyEnumerate}
+\item Forkez le projet.
+\item Créez une branche pour votre fonctionnalité ({\ttfamily git checkout -\/b feature/nouvelle\+Fonctionnalité}).
+\item Validez vos modifications (`git commit -\/am \textquotesingle{}Ajout de quelques fonctionnalités'{\ttfamily ).}
+\item {\ttfamily Poussez la branche (}git push origin feature/nouvelle\+Fonctionnalité\`{}).
+\item Ouvrez une Pull Request. 
+\end{DoxyEnumerate}

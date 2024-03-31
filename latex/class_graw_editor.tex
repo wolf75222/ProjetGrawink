@@ -1,0 +1,469 @@
+\doxysection{Graw\+Editor Class Reference}
+\hypertarget{class_graw_editor}{}\label{class_graw_editor}\index{GrawEditor@{GrawEditor}}
+
+
+The \doxylink{class_graw_editor}{Graw\+Editor} class represents an editor for creating and manipulating shapes on a canvas.  
+
+
+
+
+{\ttfamily \#include $<$Grawink.\+hpp$>$}
+
+
+
+Collaboration diagram for Graw\+Editor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=155pt]{class_graw_editor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_graw_editor_acb3191f6fbba6925421cf319b6b52c6e}\label{class_graw_editor_acb3191f6fbba6925421cf319b6b52c6e} 
+enum class \mbox{\hyperlink{class_graw_editor_acb3191f6fbba6925421cf319b6b52c6e}{Shape\+Type}} \+: uint64\+\_\+t \{ \newline
+{\bfseries Stroke} = 1ULL \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0
+, {\bfseries Triangle} = 1ULL \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 1
+, {\bfseries Rectangle} = 1ULL \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 2
+, {\bfseries Pentagon} = 1ULL \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 3
+, \newline
+{\bfseries Hexagon} = 1ULL \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 4
+, {\bfseries Heptagon} = 1ULL \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 5
+, {\bfseries Octogon} = 1ULL \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 6
+, {\bfseries Ellipsis} = 1ULL \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 7
+, \newline
+{\bfseries Polygon} = 1ULL \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 8
+, {\bfseries All} = \texorpdfstring{$\sim$}{\string~}0\+ULL
+ \}
+\begin{DoxyCompactList}\small\item\em The Shape\+Type enum represents the type of the shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_graw_editor}{Graw\+Editor}} \& \mbox{\hyperlink{class_graw_editor_a743db1fae115318bb5c99dc4ba8ee8e9}{add}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_shape}{Shape}} $>$ shape)
+\begin{DoxyCompactList}\small\item\em add adds a shape to the canvas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graw_editor}{Graw\+Editor}} \& \mbox{\hyperlink{class_graw_editor_ae19c47e55cf08fccb6e2c9f28cf17cb9}{add}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_shape}{Shape}} $>$ $>$ shapes)
+\begin{DoxyCompactList}\small\item\em add adds multiple shapes to the canvas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graw_editor}{Graw\+Editor}} \& \mbox{\hyperlink{class_graw_editor_aae8db8b911524798f60df3852bffecef}{remove}} (int shape\+Id)
+\begin{DoxyCompactList}\small\item\em remove removes a shape from the canvas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graw_editor}{Graw\+Editor}} \& \mbox{\hyperlink{class_graw_editor_a64bfed5cb2b9d3fd6d2078c65da645ff}{undo}} (size\+\_\+t steps=1)
+\begin{DoxyCompactList}\small\item\em undo undoes the addition of the last shape. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graw_editor}{Graw\+Editor}} \& \mbox{\hyperlink{class_graw_editor_a93569e4d97cf2c683ec06c697cbaa129}{redo}} (size\+\_\+t steps=1)
+\begin{DoxyCompactList}\small\item\em redo redoes the addition of the last shape that was removed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graw_editor}{Graw\+Editor}} \& \mbox{\hyperlink{class_graw_editor_ae448c08b6275bc7844a64d3ebb3d4654}{resize}} (int \mbox{\hyperlink{class_graw_editor_a2df0eadb890d8c006e0639405b3ba82f}{width}}, int \mbox{\hyperlink{class_graw_editor_a046a3d79d088ba969b0c3494644fb8eb}{height}})
+\begin{DoxyCompactList}\small\item\em resize resizes the canvas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graw_editor}{Graw\+Editor}} \& \mbox{\hyperlink{class_graw_editor_a9183b0b6ac1c1c469f27150d76755ffe}{crop}} (int x, int y, int \mbox{\hyperlink{class_graw_editor_a2df0eadb890d8c006e0639405b3ba82f}{width}}, int \mbox{\hyperlink{class_graw_editor_a046a3d79d088ba969b0c3494644fb8eb}{height}})
+\begin{DoxyCompactList}\small\item\em crop crops the canvas to the specified dimensions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graw_editor}{Graw\+Editor}} \& \mbox{\hyperlink{class_graw_editor_af0baeb44411f6ddd57d33e661de41695}{select}} (\mbox{\hyperlink{class_graw_editor_acb3191f6fbba6925421cf319b6b52c6e}{Shape\+Type}} types)
+\begin{DoxyCompactList}\small\item\em select selects shapes on the canvas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graw_editor}{Graw\+Editor}} \& \mbox{\hyperlink{class_graw_editor_adcfa13925c60914ca1e3f7fc62d207f6}{print}} ()
+\begin{DoxyCompactList}\small\item\em print prints the shapes on the canvas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graw_editor}{Graw\+Editor}} \& \mbox{\hyperlink{class_graw_editor_a1951c12a6ca7424787ab91878985b74b}{draw}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em draw writes the SVG code of the shapes on the canvas to a file. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename \mbox{\hyperlink{class_shape}{Shape}} , typename... Args$>$ }\\std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_shape}{Shape}} $>$ \mbox{\hyperlink{class_graw_editor_a80fa845fd089c9929080b05285469e07}{get\+New}} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em get\+New creates a new instance of the specified shape class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graw_editor_af207f83d1f3a445677eda9393d75bade}{\texorpdfstring{$\sim$}{\string~}\+Graw\+Editor}} ()
+\begin{DoxyCompactList}\small\item\em \texorpdfstring{$\sim$}{\string~}\+Graw\+Editor destroys the \doxylink{class_graw_editor}{Graw\+Editor} instance. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_graw_editor_a9a0d34513310ed9ac5e2e2d1461acf18}{Get\+Shape\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Get\+Shape\+Count returns the number of objects contained in the canvas. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_graw_editor_a52edecea72ea91504eb36ce787de3dfc}{Get\+Selected\+Shape\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Get\+Selected\+Shape\+Count returns the number of selected objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_graw_editor_a2bda0d9746440420ca1bc732c81573f2}{reset}} ()
+\begin{DoxyCompactList}\small\item\em reset resets the canvas. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_graw_editor_a2d0d39fdcc6c665aa3ee0c30395e46b4}{Shape\+Type\+To\+String}} (\mbox{\hyperlink{class_graw_editor_acb3191f6fbba6925421cf319b6b52c6e}{Shape\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Shape\+Type\+To\+String converts a shape type to a string. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_graw_editor_acb3191f6fbba6925421cf319b6b52c6e}{Shape\+Type}} \mbox{\hyperlink{class_graw_editor_a91e28d3cf79e8a62dc5355c6f1ecb457}{Convert\+Shape\+Type}} (\mbox{\hyperlink{class_shape_a25f91a0290232b396edfafe9bdb26389}{Shape\+::\+Shape\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Convert\+Shape\+Type converts a shape type to a Shape\+Type. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_graw_editor_a5a2691be2afa8367271eee050455907b}{Get\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Get\+Width returns the width of the canvas. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_graw_editor_afa8388f9f4e130985097a1c3df6908ff}{Get\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Get\+Height returns the height of the canvas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_graw_editor}{Graw\+Editor}} \& \mbox{\hyperlink{class_graw_editor_a6d5fa1edd21192f8a33a3cce31f3b610}{Get\+Editor}} ()
+\begin{DoxyCompactList}\small\item\em Get\+Editor returns the unique instance of the \doxylink{class_graw_editor}{Graw\+Editor} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_graw_editor_a2df0eadb890d8c006e0639405b3ba82f}\label{class_graw_editor_a2df0eadb890d8c006e0639405b3ba82f} 
+int {\bfseries width} = 600
+\begin{DoxyCompactList}\small\item\em The width of the canvas. \end{DoxyCompactList}\item 
+\Hypertarget{class_graw_editor_a046a3d79d088ba969b0c3494644fb8eb}\label{class_graw_editor_a046a3d79d088ba969b0c3494644fb8eb} 
+int {\bfseries height} = 400
+\begin{DoxyCompactList}\small\item\em The height of the canvas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_graw_editor}{Graw\+Editor} class represents an editor for creating and manipulating shapes on a canvas. 
+
+The \doxylink{class_graw_editor}{Graw\+Editor} class provides various methods for adding, removing, selecting, and manipulating shapes on a canvas. It also supports undo and redo operations, as well as exporting and displaying shapes in SVG format. The class follows the singleton design pattern, ensuring that only one instance of \doxylink{class_graw_editor}{Graw\+Editor} can exist. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_graw_editor_af207f83d1f3a445677eda9393d75bade}\label{class_graw_editor_af207f83d1f3a445677eda9393d75bade} 
+\index{GrawEditor@{GrawEditor}!````~GrawEditor@{\texorpdfstring{$\sim$}{\string~}GrawEditor}}
+\index{````~GrawEditor@{\texorpdfstring{$\sim$}{\string~}GrawEditor}!GrawEditor@{GrawEditor}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GrawEditor()}{\string~GrawEditor()}}
+{\footnotesize\ttfamily Graw\+Editor\+::\texorpdfstring{$\sim$}{\string~}\+Graw\+Editor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\texorpdfstring{$\sim$}{\string~}\+Graw\+Editor destroys the \doxylink{class_graw_editor}{Graw\+Editor} instance. 
+
+\begin{DoxyNote}{Note}
+The destructor is private to prevent the deletion of the \doxylink{class_graw_editor}{Graw\+Editor} instance. 
+
+The \doxylink{class_graw_editor}{Graw\+Editor} instance is destroyed when the program exits. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_graw_editor_a743db1fae115318bb5c99dc4ba8ee8e9}\label{class_graw_editor_a743db1fae115318bb5c99dc4ba8ee8e9} 
+\index{GrawEditor@{GrawEditor}!add@{add}}
+\index{add@{add}!GrawEditor@{GrawEditor}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graw_editor}{Graw\+Editor}} \& Graw\+Editor\+::add (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_shape}{Shape}} $>$}]{shape }\end{DoxyParamCaption})}
+
+
+
+add adds a shape to the canvas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape} & The shape to add to the canvas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the \doxylink{class_graw_editor}{Graw\+Editor} instance. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The shape is added to the canvas and can be manipulated using other methods. 
+\end{DoxyNote}
+\Hypertarget{class_graw_editor_ae19c47e55cf08fccb6e2c9f28cf17cb9}\label{class_graw_editor_ae19c47e55cf08fccb6e2c9f28cf17cb9} 
+\index{GrawEditor@{GrawEditor}!add@{add}}
+\index{add@{add}!GrawEditor@{GrawEditor}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graw_editor}{Graw\+Editor}} \& Graw\+Editor\+::add (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_shape}{Shape}} $>$ $>$}]{shapes }\end{DoxyParamCaption})}
+
+
+
+add adds multiple shapes to the canvas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shapes} & A vector of shapes to add to the canvas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the \doxylink{class_graw_editor}{Graw\+Editor} instance. 
+\end{DoxyReturn}
+\Hypertarget{class_graw_editor_a91e28d3cf79e8a62dc5355c6f1ecb457}\label{class_graw_editor_a91e28d3cf79e8a62dc5355c6f1ecb457} 
+\index{GrawEditor@{GrawEditor}!ConvertShapeType@{ConvertShapeType}}
+\index{ConvertShapeType@{ConvertShapeType}!GrawEditor@{GrawEditor}}
+\doxysubsubsection{\texorpdfstring{ConvertShapeType()}{ConvertShapeType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graw_editor_acb3191f6fbba6925421cf319b6b52c6e}{Graw\+Editor\+::\+Shape\+Type}} Graw\+Editor\+::\+Convert\+Shape\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_shape_a25f91a0290232b396edfafe9bdb26389}{Shape\+::\+Shape\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Convert\+Shape\+Type converts a shape type to a Shape\+Type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The shape type to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Shape\+Type corresponding to the shape type. 
+\end{DoxyReturn}
+\Hypertarget{class_graw_editor_a9183b0b6ac1c1c469f27150d76755ffe}\label{class_graw_editor_a9183b0b6ac1c1c469f27150d76755ffe} 
+\index{GrawEditor@{GrawEditor}!crop@{crop}}
+\index{crop@{crop}!GrawEditor@{GrawEditor}}
+\doxysubsubsection{\texorpdfstring{crop()}{crop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graw_editor}{Graw\+Editor}} \& Graw\+Editor\+::crop (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+crop crops the canvas to the specified dimensions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the top-\/left corner of the crop area. \\
+\hline
+{\em y} & The y-\/coordinate of the top-\/left corner of the crop area. \\
+\hline
+{\em width} & The width of the crop area. \\
+\hline
+{\em height} & The height of the crop area. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the \doxylink{class_graw_editor}{Graw\+Editor} instance. 
+\end{DoxyReturn}
+\Hypertarget{class_graw_editor_a1951c12a6ca7424787ab91878985b74b}\label{class_graw_editor_a1951c12a6ca7424787ab91878985b74b} 
+\index{GrawEditor@{GrawEditor}!draw@{draw}}
+\index{draw@{draw}!GrawEditor@{GrawEditor}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graw_editor}{Graw\+Editor}} \& Graw\+Editor\+::draw (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+draw writes the SVG code of the shapes on the canvas to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file to write the SVG code to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the \doxylink{class_graw_editor}{Graw\+Editor} instance. 
+\end{DoxyReturn}
+\Hypertarget{class_graw_editor_a6d5fa1edd21192f8a33a3cce31f3b610}\label{class_graw_editor_a6d5fa1edd21192f8a33a3cce31f3b610} 
+\index{GrawEditor@{GrawEditor}!GetEditor@{GetEditor}}
+\index{GetEditor@{GetEditor}!GrawEditor@{GrawEditor}}
+\doxysubsubsection{\texorpdfstring{GetEditor()}{GetEditor()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_graw_editor}{Graw\+Editor}} \& Graw\+Editor\+::\+Get\+Editor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get\+Editor returns the unique instance of the \doxylink{class_graw_editor}{Graw\+Editor} class. 
+
+\begin{DoxyReturn}{Returns}
+The unique instance of the \doxylink{class_graw_editor}{Graw\+Editor} class. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This method follows the singleton design pattern. 
+\end{DoxyNote}
+\Hypertarget{class_graw_editor_afa8388f9f4e130985097a1c3df6908ff}\label{class_graw_editor_afa8388f9f4e130985097a1c3df6908ff} 
+\index{GrawEditor@{GrawEditor}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!GrawEditor@{GrawEditor}}
+\doxysubsubsection{\texorpdfstring{GetHeight()}{GetHeight()}}
+{\footnotesize\ttfamily int Graw\+Editor\+::\+Get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get\+Height returns the height of the canvas. 
+
+\begin{DoxyReturn}{Returns}
+The height of the canvas. 
+\end{DoxyReturn}
+\Hypertarget{class_graw_editor_a80fa845fd089c9929080b05285469e07}\label{class_graw_editor_a80fa845fd089c9929080b05285469e07} 
+\index{GrawEditor@{GrawEditor}!getNew@{getNew}}
+\index{getNew@{getNew}!GrawEditor@{GrawEditor}}
+\doxysubsubsection{\texorpdfstring{getNew()}{getNew()}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{class_shape}{Shape}} , typename... Args$>$ \\
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_shape}{Shape}} $>$ Graw\+Editor\+::get\+New (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+New creates a new instance of the specified shape class. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em \doxylink{class_shape}{Shape}} & The type of shape to create. \\
+\hline
+{\em Args} & The types of the arguments to pass to the shape constructor. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em args} & The arguments to pass to the shape constructor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A shared pointer to the newly created shape object. 
+\end{DoxyReturn}
+\Hypertarget{class_graw_editor_a52edecea72ea91504eb36ce787de3dfc}\label{class_graw_editor_a52edecea72ea91504eb36ce787de3dfc} 
+\index{GrawEditor@{GrawEditor}!GetSelectedShapeCount@{GetSelectedShapeCount}}
+\index{GetSelectedShapeCount@{GetSelectedShapeCount}!GrawEditor@{GrawEditor}}
+\doxysubsubsection{\texorpdfstring{GetSelectedShapeCount()}{GetSelectedShapeCount()}}
+{\footnotesize\ttfamily int Graw\+Editor\+::\+Get\+Selected\+Shape\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get\+Selected\+Shape\+Count returns the number of selected objects. 
+
+\begin{DoxyReturn}{Returns}
+The number of selected objects. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The method returns the number of selected shapes. 
+\end{DoxyNote}
+\Hypertarget{class_graw_editor_a9a0d34513310ed9ac5e2e2d1461acf18}\label{class_graw_editor_a9a0d34513310ed9ac5e2e2d1461acf18} 
+\index{GrawEditor@{GrawEditor}!GetShapeCount@{GetShapeCount}}
+\index{GetShapeCount@{GetShapeCount}!GrawEditor@{GrawEditor}}
+\doxysubsubsection{\texorpdfstring{GetShapeCount()}{GetShapeCount()}}
+{\footnotesize\ttfamily int Graw\+Editor\+::\+Get\+Shape\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get\+Shape\+Count returns the number of objects contained in the canvas. 
+
+\begin{DoxyReturn}{Returns}
+The number of objects contained in the canvas. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The method returns the number of shapes in the canvas. 
+\end{DoxyNote}
+\Hypertarget{class_graw_editor_a5a2691be2afa8367271eee050455907b}\label{class_graw_editor_a5a2691be2afa8367271eee050455907b} 
+\index{GrawEditor@{GrawEditor}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!GrawEditor@{GrawEditor}}
+\doxysubsubsection{\texorpdfstring{GetWidth()}{GetWidth()}}
+{\footnotesize\ttfamily int Graw\+Editor\+::\+Get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get\+Width returns the width of the canvas. 
+
+\begin{DoxyReturn}{Returns}
+The width of the canvas. 
+\end{DoxyReturn}
+\Hypertarget{class_graw_editor_adcfa13925c60914ca1e3f7fc62d207f6}\label{class_graw_editor_adcfa13925c60914ca1e3f7fc62d207f6} 
+\index{GrawEditor@{GrawEditor}!print@{print}}
+\index{print@{print}!GrawEditor@{GrawEditor}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graw_editor}{Graw\+Editor}} \& Graw\+Editor\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+print prints the shapes on the canvas. 
+
+\begin{DoxyReturn}{Returns}
+A reference to the \doxylink{class_graw_editor}{Graw\+Editor} instance. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The shapes are displayed sorted by category. 
+
+The shapes are displayed in the console. 
+\end{DoxyNote}
+\Hypertarget{class_graw_editor_a93569e4d97cf2c683ec06c697cbaa129}\label{class_graw_editor_a93569e4d97cf2c683ec06c697cbaa129} 
+\index{GrawEditor@{GrawEditor}!redo@{redo}}
+\index{redo@{redo}!GrawEditor@{GrawEditor}}
+\doxysubsubsection{\texorpdfstring{redo()}{redo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graw_editor}{Graw\+Editor}} \& Graw\+Editor\+::redo (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{steps = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+redo redoes the addition of the last shape that was removed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em steps} & The number of steps to redo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the \doxylink{class_graw_editor}{Graw\+Editor} instance. 
+\end{DoxyReturn}
+\Hypertarget{class_graw_editor_aae8db8b911524798f60df3852bffecef}\label{class_graw_editor_aae8db8b911524798f60df3852bffecef} 
+\index{GrawEditor@{GrawEditor}!remove@{remove}}
+\index{remove@{remove}!GrawEditor@{GrawEditor}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graw_editor}{Graw\+Editor}} \& Graw\+Editor\+::remove (\begin{DoxyParamCaption}\item[{int}]{shape\+Id }\end{DoxyParamCaption})}
+
+
+
+remove removes a shape from the canvas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape\+Id} & The ID of the shape to remove from the canvas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the \doxylink{class_graw_editor}{Graw\+Editor} instance. 
+\end{DoxyReturn}
+\Hypertarget{class_graw_editor_a2bda0d9746440420ca1bc732c81573f2}\label{class_graw_editor_a2bda0d9746440420ca1bc732c81573f2} 
+\index{GrawEditor@{GrawEditor}!reset@{reset}}
+\index{reset@{reset}!GrawEditor@{GrawEditor}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Graw\+Editor\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+reset resets the canvas. 
+
+\begin{DoxyNote}{Note}
+The method resets the canvas, removing all shapes. 
+\end{DoxyNote}
+\Hypertarget{class_graw_editor_ae448c08b6275bc7844a64d3ebb3d4654}\label{class_graw_editor_ae448c08b6275bc7844a64d3ebb3d4654} 
+\index{GrawEditor@{GrawEditor}!resize@{resize}}
+\index{resize@{resize}!GrawEditor@{GrawEditor}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graw_editor}{Graw\+Editor}} \& Graw\+Editor\+::resize (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+resize resizes the canvas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The new width of the canvas. \\
+\hline
+{\em height} & The new height of the canvas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the \doxylink{class_graw_editor}{Graw\+Editor} instance. 
+\end{DoxyReturn}
+\Hypertarget{class_graw_editor_af0baeb44411f6ddd57d33e661de41695}\label{class_graw_editor_af0baeb44411f6ddd57d33e661de41695} 
+\index{GrawEditor@{GrawEditor}!select@{select}}
+\index{select@{select}!GrawEditor@{GrawEditor}}
+\doxysubsubsection{\texorpdfstring{select()}{select()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graw_editor}{Graw\+Editor}} \& Graw\+Editor\+::select (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_graw_editor_acb3191f6fbba6925421cf319b6b52c6e}{Shape\+Type}}}]{types }\end{DoxyParamCaption})}
+
+
+
+select selects shapes on the canvas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em types} & The types of shapes to select. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the \doxylink{class_graw_editor}{Graw\+Editor} instance. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The selection can be made using a bitwise disjunction of {\ttfamily enum Shape\+Type}. 
+\end{DoxyNote}
+\Hypertarget{class_graw_editor_a2d0d39fdcc6c665aa3ee0c30395e46b4}\label{class_graw_editor_a2d0d39fdcc6c665aa3ee0c30395e46b4} 
+\index{GrawEditor@{GrawEditor}!ShapeTypeToString@{ShapeTypeToString}}
+\index{ShapeTypeToString@{ShapeTypeToString}!GrawEditor@{GrawEditor}}
+\doxysubsubsection{\texorpdfstring{ShapeTypeToString()}{ShapeTypeToString()}}
+{\footnotesize\ttfamily std\+::string Graw\+Editor\+::\+Shape\+Type\+To\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_graw_editor_acb3191f6fbba6925421cf319b6b52c6e}{Shape\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Shape\+Type\+To\+String converts a shape type to a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The shape type to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string representation of the shape type. 
+\end{DoxyReturn}
+\Hypertarget{class_graw_editor_a64bfed5cb2b9d3fd6d2078c65da645ff}\label{class_graw_editor_a64bfed5cb2b9d3fd6d2078c65da645ff} 
+\index{GrawEditor@{GrawEditor}!undo@{undo}}
+\index{undo@{undo}!GrawEditor@{GrawEditor}}
+\doxysubsubsection{\texorpdfstring{undo()}{undo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_graw_editor}{Graw\+Editor}} \& Graw\+Editor\+::undo (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{steps = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+undo undoes the addition of the last shape. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em steps} & The number of steps to undo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the \doxylink{class_graw_editor}{Graw\+Editor} instance. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Grawink.\+hpp\item 
+src/Grawink.\+cpp\end{DoxyCompactItemize}

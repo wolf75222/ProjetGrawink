@@ -26,3 +26,7 @@ std::string Circle::draw() const {
     
     return ss.str();
 }
+
+bool Circle::isOutside(int x, int y, int width, int height) const {
+    return (center.getX() + radius < x || center.getX() - radius > x + width || center.getY() + radius < y || center.getY() - radius > y + height);
+}

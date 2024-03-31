@@ -1,0 +1,17 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_drawable.html" title="The Drawable class represents an object that can be drawn." alt="" coords="19,80,96,106"/>
+<area shape="rect" id="Node000001" href="$class_shape.html" title="The Shape class represents a drawable shape on a canvas." alt="" coords="158,80,216,106"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="111,90,157,90,157,96,111,96"/>
+<area shape="rect" id="Node000002" href="$class_circle.html" title="A class that represents a circle." alt="" coords="277,5,332,31"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="218,69,263,40,280,29,282,34,265,44,221,73"/>
+<area shape="rect" id="Node000003" href="$class_ellipse.html" title="A class that represents an ellipse." alt="" coords="274,55,334,80"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="231,81,273,71,274,77,232,86"/>
+<area shape="rect" id="Node000004" href="$class_polygon.html" title="A class that represents a polygon." alt="" coords="270,104,338,130"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="232,99,270,107,269,112,231,104"/>
+<area shape="rect" id="Node000005" href="$class_rectangle.html" title="A class that represents a rectangle." alt="" coords="264,153,344,179"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="222,112,265,140,282,151,280,155,263,144,219,116"/>
+<area shape="rect" id="Node000006" href="$class_transformable.html" title="The Transformable class represents an object that can be transformed." alt="" coords="5,129,110,155"/>
+<area shape="poly" id="edge7_Node000006_Node000001" title=" " alt="" coords="107,121,156,101,158,106,109,126"/>
+<area shape="rect" id="Node000007" href="$class_point.html" title="The Point class represents a point in 2D space." alt="" coords="161,129,213,155"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="125,140,161,140,161,145,125,145"/>
+</map>

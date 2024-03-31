@@ -1,0 +1,13 @@
+<map id="Drawable" name="Drawable">
+<area shape="rect" id="Node000001" title="The Drawable class represents an object that can be drawn." alt="" coords="168,5,263,111"/>
+<area shape="rect" id="Node000002" href="$class_shape.html" title="The Shape class represents a drawable shape on a canvas." alt="" coords="155,159,276,544"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,126,218,159,213,159,213,126"/>
+<area shape="rect" id="Node000003" href="$class_circle.html" title="A class that represents a circle." alt="" coords="5,612,92,757"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="150,487,87,613,82,611,146,485"/>
+<area shape="rect" id="Node000004" href="$class_ellipse.html" title="A class that represents an ellipse." alt="" coords="116,622,203,747"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="183,559,172,623,167,622,178,558"/>
+<area shape="rect" id="Node000005" href="$class_polygon.html" title="A class that represents a polygon." alt="" coords="227,592,315,777"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="253,558,259,592,253,592,248,559"/>
+<area shape="rect" id="Node000006" href="$class_rectangle.html" title="A class that represents a rectangle." alt="" coords="339,622,430,747"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="285,483,356,621,351,623,280,486"/>
+</map>

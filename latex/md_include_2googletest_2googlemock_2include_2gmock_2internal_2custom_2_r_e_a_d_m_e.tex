@@ -1,0 +1,17 @@
+\chapter{Customization Points}
+\hypertarget{md_include_2googletest_2googlemock_2include_2gmock_2internal_2custom_2_r_e_a_d_m_e}{}\label{md_include_2googletest_2googlemock_2include_2gmock_2internal_2custom_2_r_e_a_d_m_e}\index{Customization Points@{Customization Points}}
+\label{md_include_2googletest_2googlemock_2include_2gmock_2internal_2custom_2_r_e_a_d_m_e_autotoc_md374}%
+\Hypertarget{md_include_2googletest_2googlemock_2include_2gmock_2internal_2custom_2_r_e_a_d_m_e_autotoc_md374}%
+ The custom directory is an injection point for custom user configurations.\hypertarget{md_include_2googletest_2googlemock_2include_2gmock_2internal_2custom_2_r_e_a_d_m_e_autotoc_md375}{}\doxysection{\texorpdfstring{Header {\ttfamily gmock-\/port.\+h}}{Header {\ttfamily gmock-\/port.\+h}}}\label{md_include_2googletest_2googlemock_2include_2gmock_2internal_2custom_2_r_e_a_d_m_e_autotoc_md375}
+The following macros can be defined\+:\hypertarget{md_include_2googletest_2googlemock_2include_2gmock_2internal_2custom_2_r_e_a_d_m_e_autotoc_md376}{}\doxysubsection{\texorpdfstring{Flag related macros\+:}{Flag related macros\+:}}\label{md_include_2googletest_2googlemock_2include_2gmock_2internal_2custom_2_r_e_a_d_m_e_autotoc_md376}
+
+\begin{DoxyItemize}
+\item {\ttfamily GMOCK\+\_\+\+DECLARE\+\_\+bool\+\_\+(name)}
+\item {\ttfamily GMOCK\+\_\+\+DECLARE\+\_\+int32\+\_\+(name)}
+\item {\ttfamily GMOCK\+\_\+\+DECLARE\+\_\+string\+\_\+(name)}
+\item {\ttfamily GMOCK\+\_\+\+DEFINE\+\_\+bool\+\_\+(name, default\+\_\+val, doc)}
+\item {\ttfamily GMOCK\+\_\+\+DEFINE\+\_\+int32\+\_\+(name, default\+\_\+val, doc)}
+\item {\ttfamily GMOCK\+\_\+\+DEFINE\+\_\+string\+\_\+(name, default\+\_\+val, doc)}
+\item {\ttfamily GMOCK\+\_\+\+FLAG\+\_\+\+GET(flag\+\_\+name)}
+\item {\ttfamily GMOCK\+\_\+\+FLAG\+\_\+\+SET(flag\+\_\+name, value)} 
+\end{DoxyItemize}

@@ -1,0 +1,14 @@
+<map id="Circle" name="Circle">
+<area shape="rect" id="Node000001" title="A class that represents a circle." alt="" coords="125,858,212,1003"/>
+<area shape="rect" id="Node000002" href="$class_shape.html" title="The Shape class represents a drawable shape on a canvas." alt="" coords="108,483,229,809"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,824,171,858,166,858,166,824"/>
+<area shape="rect" id="Node000003" href="$class_drawable.html" title="The Drawable class represents an object that can be drawn." alt="" coords="5,250,100,355"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="77,369,116,483,111,484,72,370"/>
+<area shape="rect" id="Node000004" href="$class_transformable.html" title="The Transformable class represents an object that can be transformed." alt="" coords="93,5,215,151"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="159,165,167,484,162,484,154,166"/>
+<area shape="rect" id="Node000005" href="$class_point.html" title="The Point class represents a point in 2D space." alt="" coords="176,200,257,405"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="181,164,191,199,185,201,176,165"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="205,406,196,467,191,466,200,405"/>
+<area shape="rect" id="Node000006" href="$class_color.html" title="A class that represents a color." alt="" coords="281,250,355,355"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="298,356,252,460,239,492,234,490,248,458,293,354"/>
+</map>

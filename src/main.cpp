@@ -5,6 +5,9 @@
 #include <iostream>
 
 int main() {
+
+    printf("Main ... \n");
+
     GrawEditor& editor = GrawEditor::GetEditor();
     
     Point p = Point(100, 110);

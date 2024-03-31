@@ -1,0 +1,247 @@
+\doxysection{Circle Class Reference}
+\hypertarget{class_circle}{}\label{class_circle}\index{Circle@{Circle}}
+
+
+A class that represents a circle.  
+
+
+
+
+{\ttfamily \#include $<$Circle.\+hpp$>$}
+
+
+
+Inheritance diagram for Circle\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_circle__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Circle\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_circle__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_circle_a950b601b5c30f930d009eacd3b739aae}{Circle}} (int \+\_\+id, \mbox{\hyperlink{class_point}{Point}} \&\+\_\+center, double \+\_\+radius, double \+\_\+angle)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_circle}{Circle} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_circle_a76c2d1e8fd215e4da81b7a6af76c5540}{scale}} (double factor) override
+\begin{DoxyCompactList}\small\item\em Scale the circle by a given factor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_circle_af1915ac82ad1d9cfa5976ef8211dbd17}{rotate}} (const \mbox{\hyperlink{class_point}{Point}} \&p, double \mbox{\hyperlink{class_shape_a1642eab9d4f9d319a3d9a38d4a69cd90}{angle}}) override
+\begin{DoxyCompactList}\small\item\em Rotate the circle around a given point by a given angle. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_circle_aae592e405b85728990ffc22a54051324}{is\+Outside}} (int x, int y, int width, int height) const override
+\begin{DoxyCompactList}\small\item\em Check if the circle is outside a given rectangle. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_circle_a57425a24df3d9443991d80c9855424cd}{draw}} () const override
+\begin{DoxyCompactList}\small\item\em Draw the circle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_shape}{Shape}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shape_a52d12da45e055d91bb02310195a3e88d}{Shape}} (\mbox{\hyperlink{class_shape_a25f91a0290232b396edfafe9bdb26389}{Shape\+Type}} \+\_\+type, int \+\_\+id, \mbox{\hyperlink{class_point}{Point}} \&\+\_\+center, double \+\_\+angle)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_shape}{Shape} constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_point}{Point}} \mbox{\hyperlink{class_shape_aaa42a646dd845616bb2a7263ab2e3a6f}{get\+Center}} () const
+\begin{DoxyCompactList}\small\item\em Represents a point in a two-\/dimensional space. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_shape_afd8393cbe1c8eb944c04a438562d1cb0}{set\+Center}} (const \mbox{\hyperlink{class_point}{Point}} \&p)
+\begin{DoxyCompactList}\small\item\em set\+Center sets the center point of the shape. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_a33b124e5dc888c964bb691891161a94b}{translate}} (const \mbox{\hyperlink{class_point}{Point}} \&p) override
+\begin{DoxyCompactList}\small\item\em Translate the shape by a given point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_a7446da8df3109375971f0a03bc705543}{rotate}} (const \mbox{\hyperlink{class_point}{Point}} \&p, double \mbox{\hyperlink{class_shape_a1642eab9d4f9d319a3d9a38d4a69cd90}{angle}}) override
+\begin{DoxyCompactList}\small\item\em Rotate the shape around a given point by a given angle. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_color}{Color}} \& \mbox{\hyperlink{class_shape_a07796dace55623c799255259269c3444}{get\+Fill\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Get the fill color of the shape. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_color}{Color}} \& \mbox{\hyperlink{class_shape_a2a200759a908ee6f8e70e66784fb8d96}{get\+Stroke\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Get the stroke color of the shape. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_shape_af5af425d9ff33ae6f652dff2c9f9feb4}{get\+Stroke\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Get the stroke width of the shape. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_ae86c9e226f1f907d31fb431b56570598}{set\+Fill\+Color}} (const \mbox{\hyperlink{class_color}{Color}} \&color)
+\begin{DoxyCompactList}\small\item\em Set the fill color of the shape. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_affbb7e5da1fa1ab25859a60d9801c456}{set\+Stroke\+Color}} (const \mbox{\hyperlink{class_color}{Color}} \&color)
+\begin{DoxyCompactList}\small\item\em Set the stroke color of the shape. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shape_a77f05d84217b15e9a0ecb3c74265295b}{set\+Stroke\+Width}} (double width)
+\begin{DoxyCompactList}\small\item\em Set the stroke width of the shape. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_shape_a25f91a0290232b396edfafe9bdb26389}{Shape\+Type}} \mbox{\hyperlink{class_shape_acba0c495567f7836546115780cc6ff9a}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Get the type of the shape. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_shape_ad7d10449814e74c5bc2d9c59035afdeb}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Get the name of the shape. \end{DoxyCompactList}\item 
+void {\bfseries print} ()
+\begin{DoxyCompactList}\small\item\em Print the shape. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_shape_a9943196f6a4fb3c9da2a8904c1af9a18}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Get the ID of the shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_drawable}{Drawable}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Drawable} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_drawable}{Drawable} object. \end{DoxyCompactList}\item 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Drawable} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_drawable}{Drawable} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Types inherited from \mbox{\hyperlink{class_shape}{Shape}}}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_shape_a25f91a0290232b396edfafe9bdb26389}\label{class_shape_a25f91a0290232b396edfafe9bdb26389} 
+enum class \mbox{\hyperlink{class_shape_a25f91a0290232b396edfafe9bdb26389}{Shape\+Type}} \+: uint64\+\_\+t \{ \newline
+{\bfseries Stroke} = 1ULL \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 0
+, {\bfseries Triangle} = 1ULL \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 1
+, {\bfseries Rectangle} = 1ULL \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 2
+, {\bfseries Pentagon} = 1ULL \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 3
+, \newline
+{\bfseries Hexagon} = 1ULL \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 4
+, {\bfseries Heptagon} = 1ULL \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 5
+, {\bfseries Octogon} = 1ULL \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 6
+, {\bfseries Ellipsis} = 1ULL \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 7
+, \newline
+{\bfseries Polygon} = 1ULL \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} 8
+, {\bfseries All} = \texorpdfstring{$\sim$}{\string~}0\+ULL
+ \}
+\begin{DoxyCompactList}\small\item\em The Shape\+Type enum represents the type of the shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_shape}{Shape}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shape_a25f91a0290232b396edfafe9bdb26389}{Shape\+Type}} {\bfseries type}
+\begin{DoxyCompactList}\small\item\em The type of the shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_shape}{Shape}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries id}
+\begin{DoxyCompactList}\small\item\em The unique identifier of the shape. \end{DoxyCompactList}\item 
+double {\bfseries angle} = 0.\+0
+\begin{DoxyCompactList}\small\item\em The rotation angle of the shape. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_point}{Point}} {\bfseries center}
+\begin{DoxyCompactList}\small\item\em The center point of the shape. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_color}{Color}} {\bfseries fill} = \mbox{\hyperlink{class_color}{Color}}()
+\begin{DoxyCompactList}\small\item\em The fill color of the shape. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_color}{Color}} {\bfseries stroke} = \mbox{\hyperlink{class_color}{Color}}()
+\begin{DoxyCompactList}\small\item\em The stroke color of the shape. \end{DoxyCompactList}\item 
+double {\bfseries stroke\+\_\+width} = 1.\+0
+\begin{DoxyCompactList}\small\item\em The stroke width of the shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that represents a circle. 
+
+This class inherits from the \doxylink{class_shape}{Shape} class and represents a circle. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_circle_a950b601b5c30f930d009eacd3b739aae}\label{class_circle_a950b601b5c30f930d009eacd3b739aae} 
+\index{Circle@{Circle}!Circle@{Circle}}
+\index{Circle@{Circle}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{Circle()}{Circle()}}
+{\footnotesize\ttfamily Circle\+::\+Circle (\begin{DoxyParamCaption}\item[{int}]{\+\_\+id,  }\item[{\mbox{\hyperlink{class_point}{Point}} \&}]{\+\_\+center,  }\item[{double}]{\+\_\+radius,  }\item[{double}]{\+\_\+angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \doxylink{class_circle}{Circle} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+id} & The ID of the circle. \\
+\hline
+{\em \+\_\+center} & The center point of the circle. \\
+\hline
+{\em \+\_\+radius} & The radius of the circle. \\
+\hline
+{\em \+\_\+angle} & The rotation angle of the circle. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_circle_a57425a24df3d9443991d80c9855424cd}\label{class_circle_a57425a24df3d9443991d80c9855424cd} 
+\index{Circle@{Circle}!draw@{draw}}
+\index{draw@{draw}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily std\+::string Circle\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draw the circle. 
+
+\begin{DoxyReturn}{Returns}
+A string that represents the circle. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_drawable_a45f9b39e71833c87eb954f2464b41d71}{Drawable}}.
+
+\Hypertarget{class_circle_aae592e405b85728990ffc22a54051324}\label{class_circle_aae592e405b85728990ffc22a54051324} 
+\index{Circle@{Circle}!isOutside@{isOutside}}
+\index{isOutside@{isOutside}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{isOutside()}{isOutside()}}
+{\footnotesize\ttfamily bool Circle\+::is\+Outside (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if the circle is outside a given rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the top-\/left corner of the rectangle. \\
+\hline
+{\em y} & The y-\/coordinate of the top-\/left corner of the rectangle. \\
+\hline
+{\em width} & The width of the rectangle. \\
+\hline
+{\em height} & The height of the rectangle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the circle is outside the rectangle, false otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_shape_aec8c5ddeebcea4288086cc76689d7e6b}{Shape}}.
+
+\Hypertarget{class_circle_af1915ac82ad1d9cfa5976ef8211dbd17}\label{class_circle_af1915ac82ad1d9cfa5976ef8211dbd17} 
+\index{Circle@{Circle}!rotate@{rotate}}
+\index{rotate@{rotate}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Circle\+::rotate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_point}{Point}} \&}]{p,  }\item[{double}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rotate the circle around a given point by a given angle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The point to rotate the circle around. \\
+\hline
+{\em angle} & The angle to rotate the circle by. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_transformable_a196b92535292a051ef19cbe9f2eb9db9}{Transformable}}.
+
+\Hypertarget{class_circle_a76c2d1e8fd215e4da81b7a6af76c5540}\label{class_circle_a76c2d1e8fd215e4da81b7a6af76c5540} 
+\index{Circle@{Circle}!scale@{scale}}
+\index{scale@{scale}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily void Circle\+::scale (\begin{DoxyParamCaption}\item[{double}]{factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Scale the circle by a given factor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em factor} & The factor to scale the circle by. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_shape_a2001a395ccd3f76320da0e692d28e9ce}{Shape}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/shapes/Circle.\+hpp\item 
+src/shapes/Circle.\+cpp\end{DoxyCompactItemize}

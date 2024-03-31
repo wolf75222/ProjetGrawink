@@ -1,0 +1,9 @@
+<map id="Polygon" name="Polygon">
+<area shape="rect" id="Node000001" title="A class that represents a polygon." alt="" coords="75,632,163,817"/>
+<area shape="rect" id="Node000002" href="$class_shape.html" title="The Shape class represents a drawable shape on a canvas." alt="" coords="59,199,180,584"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,599,122,632,117,632,117,599"/>
+<area shape="rect" id="Node000003" href="$class_drawable.html" title="The Drawable class represents an object that can be drawn." alt="" coords="5,25,100,131"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="69,145,81,199,76,200,64,146"/>
+<area shape="rect" id="Node000004" href="$class_transformable.html" title="The Transformable class represents an object that can be transformed." alt="" coords="125,5,247,151"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="170,166,163,199,158,198,165,165"/>
+</map>

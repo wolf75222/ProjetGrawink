@@ -1,0 +1,7 @@
+<map id="NonParameterizedBaseTest" name="NonParameterizedBaseTest">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,379,200,444"/>
+<area shape="rect" id="Node000003" href="$class_parameterized_derived_test.html" title=" " alt="" coords="11,492,195,577"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="105,459,105,492,100,492,100,459"/>
+<area shape="rect" id="Node000002" href="$classtesting_1_1_test.html" title=" " alt="" coords="29,5,176,331"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,346,105,379,100,379,100,346"/>
+</map>

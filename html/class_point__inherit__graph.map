@@ -1,0 +1,5 @@
+<map id="Point" name="Point">
+<area shape="rect" id="Node000001" title="The Point class represents a point in 2D space." alt="" coords="26,199,107,404"/>
+<area shape="rect" id="Node000002" href="$class_transformable.html" title="The Transformable class represents an object that can be transformed." alt="" coords="5,5,128,151"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="69,166,69,199,64,199,64,166"/>
+</map>

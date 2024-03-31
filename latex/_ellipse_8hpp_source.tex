@@ -1,0 +1,24 @@
+\doxysection{Ellipse.\+hpp}
+\hypertarget{_ellipse_8hpp_source}{}\label{_ellipse_8hpp_source}\index{include/shapes/Ellipse.hpp@{include/shapes/Ellipse.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Shape.hpp"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ellipse}{Ellipse}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_shape}{Shape}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{double}\ width\ =\ 1.0;\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{double}\ height\ =\ 1.0;\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_ellipse_a25ebee50bed876e7e72c06d496580635}{Ellipse}}(\textcolor{keywordtype}{int}\ \_id,\ \mbox{\hyperlink{class_point}{Point}}\&\ \_center,\ \textcolor{keywordtype}{double}\ \_width,\ \textcolor{keywordtype}{double}\ \_height,\ \textcolor{keywordtype}{double}\ \_angle)\ :\ \mbox{\hyperlink{class_shape}{Shape}}(\mbox{\hyperlink{class_shape_a25f91a0290232b396edfafe9bdb26389}{ShapeType}}::Ellipsis,\ \_id,\ \_center,\ \_angle),\ width(\_width),\ height(\_height)\ \{\};\ \ \ \ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ellipse_a4f5d327223fe118b19006f06e2443705}{scale}}(\textcolor{keywordtype}{double}\ factor)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ellipse_adbb6e9ca496781dc0c5574bf70ffe51e}{isOutside}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ std::string\ \mbox{\hyperlink{class_ellipse_a7ef2bd4868c255af67b68cfb3530bdd7}{draw}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00051\ \};}
+
+\end{DoxyCode}

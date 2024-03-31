@@ -1,0 +1,24 @@
+\doxysection{Rectangle.\+hpp}
+\hypertarget{_rectangle_8hpp_source}{}\label{_rectangle_8hpp_source}\index{include/shapes/Rectangle.hpp@{include/shapes/Rectangle.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Shape.hpp"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_rectangle}{Rectangle}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_shape}{Shape}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{double}\ width\ =\ 1.0;\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{double}\ height\ =\ 1.0;\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_rectangle_ab1a7f87912ca2a9af1b72f2fb78a4c52}{Rectangle}}(\textcolor{keywordtype}{int}\ \_id,\ \mbox{\hyperlink{class_point}{Point}}\&\ \_center,\ \textcolor{keywordtype}{double}\ \_width,\ \textcolor{keywordtype}{double}\ \_height,\ \textcolor{keywordtype}{double}\ \_angle)\ :\ \mbox{\hyperlink{class_shape}{Shape}}(\mbox{\hyperlink{class_shape_a25f91a0290232b396edfafe9bdb26389}{ShapeType}}::\mbox{\hyperlink{class_rectangle}{Rectangle}},\ \_id,\ \_center,\ \_angle),\ width(\_width),\ height(\_height)\ \{\};}
+\DoxyCodeLine{00026\ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rectangle_ad5bb87a87e5d8b9c25e758e7375bdda0}{scale}}(\textcolor{keywordtype}{double}\ factor)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_rectangle_a8fccdbd95ad1804ee1fc65a058918f3c}{isOutside}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ std::string\ \mbox{\hyperlink{class_rectangle_aeba02e8b123290f7b1f03be319fdfabb}{draw}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00051\ \};}
+
+\end{DoxyCode}

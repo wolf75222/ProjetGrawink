@@ -18,17 +18,9 @@ void Shape::rotate(const Point& p, double angle) {
 };
 
 
-bool Shape::isOutside(int x, int y, int width, int height) {
-    // Utilise getCenter pour obtenir le Point central
-    Point center = this->getCenter();
-
-    // Utilise getX() et getY() pour accéder aux coordonnées x et y du centre
-    double centerX = center.getX();
-    double centerY = center.getY();
-
-    // Vérifie si le centre est en dehors de la zone spécifiée
-    return centerX < x || centerY < y || centerX > x + width || centerY > y + height;
-}
+bool Shape::isOutside(int x, int y, int width, int height) const {
+    return center.getX() < x || center.getX() > x + width || center.getY() < y || center.getY() > y + height;
+};
 
 
 

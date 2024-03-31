@@ -1,0 +1,112 @@
+\doxysection{Transformable Class Reference}
+\hypertarget{class_transformable}{}\label{class_transformable}\index{Transformable@{Transformable}}
+
+
+The \doxylink{class_transformable}{Transformable} class represents an object that can be transformed.  
+
+
+
+
+{\ttfamily \#include $<$Transformable.\+hpp$>$}
+
+
+
+Inheritance diagram for Transformable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_transformable__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Transformable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{class_transformable__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_transformable_acbf45ddb308cb0ca2301f92d01ec3ef4}{translate}} (const \mbox{\hyperlink{class_point}{Point}} \&p)=0
+\begin{DoxyCompactList}\small\item\em Translate the object by a given point. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_transformable_a196b92535292a051ef19cbe9f2eb9db9}{rotate}} (const \mbox{\hyperlink{class_point}{Point}} \&p, double angle)=0
+\begin{DoxyCompactList}\small\item\em Rotate the object around a given point by a given angle. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_transformable_ad708908e8b550aa1ec5822877341e5ad}{scale}} (double factor)=0
+\begin{DoxyCompactList}\small\item\em Scale the object by a given factor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_transformable}{Transformable} class represents an object that can be transformed. 
+
+The \doxylink{class_transformable}{Transformable} class provides methods for translating, rotating, and scaling objects. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_transformable_a196b92535292a051ef19cbe9f2eb9db9}\label{class_transformable_a196b92535292a051ef19cbe9f2eb9db9} 
+\index{Transformable@{Transformable}!rotate@{rotate}}
+\index{rotate@{rotate}!Transformable@{Transformable}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily virtual void Transformable\+::rotate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_point}{Point}} \&}]{p,  }\item[{double}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Rotate the object around a given point by a given angle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The point to rotate the object around. \\
+\hline
+{\em angle} & The angle to rotate the object by. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_circle_af1915ac82ad1d9cfa5976ef8211dbd17}{Circle}}, \mbox{\hyperlink{class_polygon_a0f09a239544e37f881ebffd9f9bd1538}{Polygon}}, \mbox{\hyperlink{class_shape_a7446da8df3109375971f0a03bc705543}{Shape}}, and \mbox{\hyperlink{class_point_a8718c325f1fdaa4093413dc834b56ce6}{Point}}.
+
+\Hypertarget{class_transformable_ad708908e8b550aa1ec5822877341e5ad}\label{class_transformable_ad708908e8b550aa1ec5822877341e5ad} 
+\index{Transformable@{Transformable}!scale@{scale}}
+\index{scale@{scale}!Transformable@{Transformable}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily virtual void Transformable\+::scale (\begin{DoxyParamCaption}\item[{double}]{factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Scale the object by a given factor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em factor} & The factor to scale the object by. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_circle_a76c2d1e8fd215e4da81b7a6af76c5540}{Circle}}, \mbox{\hyperlink{class_ellipse_a4f5d327223fe118b19006f06e2443705}{Ellipse}}, \mbox{\hyperlink{class_polygon_a3bb313272ff7de853272036e3dd0b9dd}{Polygon}}, \mbox{\hyperlink{class_rectangle_ad5bb87a87e5d8b9c25e758e7375bdda0}{Rectangle}}, \mbox{\hyperlink{class_point_ac6f2dff4fd2dfed407e1c22ff5a5cc34}{Point}}, and \mbox{\hyperlink{class_shape_a2001a395ccd3f76320da0e692d28e9ce}{Shape}}.
+
+\Hypertarget{class_transformable_acbf45ddb308cb0ca2301f92d01ec3ef4}\label{class_transformable_acbf45ddb308cb0ca2301f92d01ec3ef4} 
+\index{Transformable@{Transformable}!translate@{translate}}
+\index{translate@{translate}!Transformable@{Transformable}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily virtual void Transformable\+::translate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_point}{Point}} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Translate the object by a given point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The point to translate the object by. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_polygon_a0bdafbf5066c00f7097500c11113dfcd}{Polygon}}, \mbox{\hyperlink{class_shape_a33b124e5dc888c964bb691891161a94b}{Shape}}, and \mbox{\hyperlink{class_point_a9d527bcf4f65077135f026add703575f}{Point}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/utils/Transformable.\+hpp\end{DoxyCompactItemize}

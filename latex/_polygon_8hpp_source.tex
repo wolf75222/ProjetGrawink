@@ -1,0 +1,49 @@
+\doxysection{Polygon.\+hpp}
+\hypertarget{_polygon_8hpp_source}{}\label{_polygon_8hpp_source}\index{include/shapes/Polygon.hpp@{include/shapes/Polygon.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Shape.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_polygon}{Polygon}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_shape}{Shape}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ std::vector<Point>\ vertices;\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ Args>\ \mbox{\hyperlink{class_polygon_af69f97d856f88183e0b30fb96cb23395}{Polygon}}(\textcolor{keywordtype}{int}\ \_id,\ \mbox{\hyperlink{class_point}{Point}}\&\ \_center,\ \textcolor{keywordtype}{double}\ \_angle,\ Args\&\&...\ args)\ :\ \mbox{\hyperlink{class_shape}{Shape}}(\mbox{\hyperlink{class_shape_a25f91a0290232b396edfafe9bdb26389}{ShapeType}}::\mbox{\hyperlink{class_polygon}{Polygon}}\ ,\_id,\ \_center,\ \_angle),\ vertices\{std::forward<Args>(args)...\}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (vertices.size())\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_shape_a5719d40a67a935c207890ea68d5b27b9}{type}}\ =\ ShapeType::Pentagon;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 6:}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_shape_a5719d40a67a935c207890ea68d5b27b9}{type}}\ =\ ShapeType::Hexagon;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 7:}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_shape_a5719d40a67a935c207890ea68d5b27b9}{type}}\ =\ ShapeType::Heptagon;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 8:}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_shape_a5719d40a67a935c207890ea68d5b27b9}{type}}\ =\ ShapeType::Octogon;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_shape_a5719d40a67a935c207890ea68d5b27b9}{type}}\ =\ ShapeType::Polygon;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_point}{Point}}\ \mbox{\hyperlink{class_polygon_acf17904656edf56733ab979b1779c5b1}{getCenter}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_polygon_a0bdafbf5066c00f7097500c11113dfcd}{translate}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_point}{Point}}\&\ p)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_polygon_a0f09a239544e37f881ebffd9f9bd1538}{rotate}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_point}{Point}}\&\ p,\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_shape_a1642eab9d4f9d319a3d9a38d4a69cd90}{angle}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_polygon_a3bb313272ff7de853272036e3dd0b9dd}{scale}}(\textcolor{keywordtype}{double}\ factor)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_polygon_a36eb44fab28470e5a858ca582864f8c1}{isOutside}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00090\ \ \ \ \ std::string\ \mbox{\hyperlink{class_polygon_a1710620d62c324bd5d77a479aa1c25db}{draw}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00091\ \};}
+
+\end{DoxyCode}

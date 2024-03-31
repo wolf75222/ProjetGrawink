@@ -1,0 +1,26 @@
+\doxysection{Circle.\+hpp}
+\hypertarget{_circle_8hpp_source}{}\label{_circle_8hpp_source}\index{include/shapes/Circle.hpp@{include/shapes/Circle.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Shape.hpp"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_circle}{Circle}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_shape}{Shape}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{double}\ radius\ =\ 1.0;\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_circle_a950b601b5c30f930d009eacd3b739aae}{Circle}}(\textcolor{keywordtype}{int}\ \_id,\ \mbox{\hyperlink{class_point}{Point}}\ \&\_center,\ \textcolor{keywordtype}{double}\ \_radius,\ \textcolor{keywordtype}{double}\ \_angle)\ :\ \mbox{\hyperlink{class_shape}{Shape}}(\mbox{\hyperlink{class_shape_a25f91a0290232b396edfafe9bdb26389}{ShapeType}}::Ellipsis,\ \_id,\ \_center,\ \_angle),\ radius(\_radius)\{\};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_circle_a76c2d1e8fd215e4da81b7a6af76c5540}{scale}}(\textcolor{keywordtype}{double}\ factor)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_circle_af1915ac82ad1d9cfa5976ef8211dbd17}{rotate}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_point}{Point}}\ \&p,\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_shape_a1642eab9d4f9d319a3d9a38d4a69cd90}{angle}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_circle_aae592e405b85728990ffc22a54051324}{isOutside}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ \ \ std::string\ \mbox{\hyperlink{class_circle_a57425a24df3d9443991d80c9855424cd}{draw}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00058\ \};}
+
+\end{DoxyCode}

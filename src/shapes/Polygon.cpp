@@ -54,3 +54,12 @@ std::string Polygon::draw() const {
     
     return ss.str();
 }
+
+bool Polygon::isOutside(int x, int y, int width, int height) const {
+    for (const Point& vertex : vertices) {
+        if (vertex.getX() < x || vertex.getX() > x + width || vertex.getY() < y || vertex.getY() > y + height) {
+            return true;
+        }
+    }
+    return false;
+}

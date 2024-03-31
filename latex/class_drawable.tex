@@ -1,0 +1,72 @@
+\doxysection{Drawable Class Reference}
+\hypertarget{class_drawable}{}\label{class_drawable}\index{Drawable@{Drawable}}
+
+
+The \doxylink{class_drawable}{Drawable} class represents an object that can be drawn.  
+
+
+
+
+{\ttfamily \#include $<$Drawable.\+hpp$>$}
+
+
+
+Inheritance diagram for Drawable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_drawable__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Drawable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_drawable__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_drawable_a611d8615c65f4c7422db5f50941cd545}\label{class_drawable_a611d8615c65f4c7422db5f50941cd545} 
+{\bfseries Drawable} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_drawable}{Drawable} object. \end{DoxyCompactList}\item 
+\Hypertarget{class_drawable_a313ec095ce0ea2a8c7cac78a6be27be8}\label{class_drawable_a313ec095ce0ea2a8c7cac78a6be27be8} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Drawable} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \doxylink{class_drawable}{Drawable} object. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{class_drawable_a45f9b39e71833c87eb954f2464b41d71}{draw}} () const =0
+\begin{DoxyCompactList}\small\item\em Draw the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_drawable}{Drawable} class represents an object that can be drawn. 
+
+The \doxylink{class_drawable}{Drawable} class provides a method for drawing objects. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_drawable_a45f9b39e71833c87eb954f2464b41d71}\label{class_drawable_a45f9b39e71833c87eb954f2464b41d71} 
+\index{Drawable@{Drawable}!draw@{draw}}
+\index{draw@{draw}!Drawable@{Drawable}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual std\+::string Drawable\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Draw the object. 
+
+\begin{DoxyReturn}{Returns}
+A string that represents the object. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_circle_a57425a24df3d9443991d80c9855424cd}{Circle}}, \mbox{\hyperlink{class_ellipse_a7ef2bd4868c255af67b68cfb3530bdd7}{Ellipse}}, \mbox{\hyperlink{class_polygon_a1710620d62c324bd5d77a479aa1c25db}{Polygon}}, and \mbox{\hyperlink{class_rectangle_aeba02e8b123290f7b1f03be319fdfabb}{Rectangle}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/utils/Drawable.\+hpp\end{DoxyCompactItemize}
